@@ -1,6 +1,0 @@
-C:\Users\Nicolae\Documents\GitHub\warehouse\trunk\ProductWarehouseManager\ComponentsIntergrationMiddleware\bin\Debug\ComponentsIntergrationMiddleware.dll
-C:\Users\Nicolae\Documents\GitHub\warehouse\trunk\ProductWarehouseManager\ComponentsIntergrationMiddleware\bin\Debug\ComponentsIntergrationMiddleware.pdb
-C:\Users\Nicolae\Documents\GitHub\warehouse\trunk\ProductWarehouseManager\ComponentsIntergrationMiddleware\obj\Debug\ComponentsIntergrationMiddleware.csprojResolveAssemblyReference.cache
-C:\Users\Nicolae\Documents\GitHub\warehouse\trunk\ProductWarehouseManager\ComponentsIntergrationMiddleware\obj\Debug\ComponentsIntergrationMiddleware.csproj.CoreCompileInputs.cache
-C:\Users\Nicolae\Documents\GitHub\warehouse\trunk\ProductWarehouseManager\ComponentsIntergrationMiddleware\obj\Debug\ComponentsIntergrationMiddleware.dll
-C:\Users\Nicolae\Documents\GitHub\warehouse\trunk\ProductWarehouseManager\ComponentsIntergrationMiddleware\obj\Debug\ComponentsIntergrationMiddleware.pdb
