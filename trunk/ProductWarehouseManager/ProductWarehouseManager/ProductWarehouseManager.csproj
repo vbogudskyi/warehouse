@@ -75,5 +75,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ComponentsIntergrationMiddleware\ComponentsIntergrationMiddleware.csproj">
+      <Project>{73554213-09ae-482b-a00e-7d91698ca096}</Project>
+      <Name>ComponentsIntergrationMiddleware</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
