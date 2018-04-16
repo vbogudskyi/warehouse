@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ComponentsIntergrationMiddleware
 {
-    public class Class1
+    public sealed class ComponentIntegrationFacade
     {
     }
 }
