@@ -1,0 +1,103 @@
+
+//Create WareHouse Database
+CREATE DATABASE WareHouse
+ON
+(
+ NAME = WareHouse,
+ FILENAME = 'C:\Program Files\Microsoft SQL Server\MSSQL11.MYSQLSERVER\MSSQL\DATA\WareHouse.mdf',
+ SIZE = 50 MB,
+ MAXSIZE = 75 MB,
+ FILEGROWTH = 5 MB
+)
+LOG ON
+(
+ NAME = WareHouse_Log,
+ FILENAME = 'C:\Program Files\Microsoft SQL Server\MSSQL11.MYSQLSERVER\MSSQL\DATA\WareHouse.ldf',
+ SIZE = 25,
+ MAXSIZE = 50 MB,
+ FILEGROWTH = 5 MB
+);
+GO
+
+
+
+//Create Item Tables
+CREATE TABLE ItemTableName
+(
+	itemId int IDENTITY PRIMARY KEY,
+	item_name varchar(30) NOT NULL,	
+	item_Manufacturer varchar(30) NOT NULL,
+	item_Description varchar(100) NOT NULL
+)
+
+//create item table
+CREATE TABLE Items
+(
+	itemID int FOREIGN KEY REFERENCES ItemTableName(itemID),
+	itemName varchar(30) FOREIGN KEY REFERENCES ItemTableName(itemName),
+	itemQuantity int DEFAULT 0
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create Table StatusData
+(
+	statusId int Not NUll,
+	id int IDENTITY Not Null,
+	name varchar(15) Not NUll,
+	Primary Key (statusId, name)
+);
+
+Create Table PermissionsData
+(
+	permissionId int not null,
+	id int IDENTITY not null,
+	name varchar(15) not null,
+	Primary Key(permissionId, name)
+);
+
+Create Table PermissionSet
+(
+	permissionSetId int Not Null,
+	id int IDENTITY not null,
+	statusId int Foreign Key References StatusData(statusId),
+	permissionId int Foreign Key References PermissionData(permissionId),
+	Primary Key (permissionSetId, statusId, permissionId)
+);
+
+
+Create Table UserData
+(
+	userId varchar(10) not null,
+	id int IDENTITY Not NUll,
+	statusId int Foreign Key References StatusData(statusId) Not null,
+	lName varchar(25) not null,
+	fName varchar(25) not null,
+	RSA varchar(150) UNIQUE CHECK , ---need to add data--
+	logIn varchar(50) not null,
+	password varchar(20) CHECK , --need to add adata--
+	creation_Date date GETDATE,
+	termination_Date CHECK > GETDATE,
+	Primary key (userId, logIn)
+);
+
+Create Table SignOn
+(
+	id int IDENTITY not null,
+	userId varchar(10) Foreign Key References UserData(userId) not null,
+	sign_On_date date GETDATE,
+	cookie varchar(10) not null,
+	Primary Key (userId, cookie)
+);
