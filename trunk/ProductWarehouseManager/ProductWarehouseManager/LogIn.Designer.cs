@@ -1,6 +1,6 @@
 ﻿namespace ProductWarehouseManager
 {
-    partial class Product_WareHouse_MS__Log_In
+    partial class LogIn
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Product_WareHouse_MS__Log_In));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogIn));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lnklbl_SignUp = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
@@ -159,7 +159,7 @@
             this.panel2.Size = new System.Drawing.Size(1, 293);
             this.panel2.TabIndex = 23;
             // 
-            // Product_WareHouse_MS__Log_In
+            // LogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -176,7 +176,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Product_WareHouse_MS__Log_In";
+            this.Name = "LogIn";
             this.Text = "Product WareHouse MS, Log In";
             this.ResumeLayout(false);
             this.PerformLayout();

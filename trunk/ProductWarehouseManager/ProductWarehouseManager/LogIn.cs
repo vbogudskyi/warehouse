@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace ProductWarehouseManager
 {
-    public partial class Product_WareHouse_MS__Log_In : Form
+    public partial class LogIn : Form
     {
-        public Product_WareHouse_MS__Log_In()
+        public LogIn()
         {
             InitializeComponent();
         }
+
+
     }
 }

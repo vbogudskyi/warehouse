@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace ProductWarehouseManager
 {
-    public partial class Form1 : Form
+    public partial class SignUp : Form
     {
-        public Form1()
+        public SignUp()
         {
             InitializeComponent();
+        }
+
+        private void SignUp_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

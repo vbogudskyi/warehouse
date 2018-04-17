@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace ProductWarehouseManager
 {
-    public partial class ProductWareHouseUserManager : Form
+    public partial class UserManager : Form
     {
-        public ProductWareHouseUserManager()
+        public UserManager()
         {
             InitializeComponent();
+        }
+
+        private void UserManager_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

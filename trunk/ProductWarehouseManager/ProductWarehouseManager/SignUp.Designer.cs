@@ -1,6 +1,6 @@
 ﻿namespace ProductWarehouseManager
 {
-    partial class Form1
+    partial class SignUp
     {
         /// <summary>
         /// Required designer variable.
@@ -207,7 +207,7 @@
             this.label8.TabIndex = 44;
             this.label8.Text = "Password*: ";
             // 
-            // Form1
+            // SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -229,8 +229,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "SignUp";
             this.Text = "Product WareHouse MS, SignUp";
+            this.Load += new System.EventHandler(this.SignUp_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

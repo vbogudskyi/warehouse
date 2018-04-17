@@ -1,6 +1,6 @@
 ﻿namespace ProductWarehouseManager
 {
-    partial class ProductWareHouseUserManager
+    partial class UserManager
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductWareHouseUserManager));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserManager));
             this.btn_Save = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -232,7 +232,7 @@
             this.checkBox1.Text = "Suspend";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // ProductWareHouseUserManager
+            // UserManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -258,8 +258,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btn_Save);
-            this.Name = "ProductWareHouseUserManager";
+            this.Name = "UserManager";
             this.Text = "Product WareHouse User Manager";
+            this.Load += new System.EventHandler(this.UserManager_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
