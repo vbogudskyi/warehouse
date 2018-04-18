@@ -76,3 +76,5 @@ EXEC sp_helpconstraint SignIn;
 ALTER TABLE SignIn
 ADD CONSTRAINT ck_ip_address CHECK(IP LIKE '%[0-9]%.%[0-9]%.%[0-9]%.%[0-9]%');
 
+ALTER TABLE Users
+ADD CONSTRAINT uq_login UNIQUE(LOGIN);
