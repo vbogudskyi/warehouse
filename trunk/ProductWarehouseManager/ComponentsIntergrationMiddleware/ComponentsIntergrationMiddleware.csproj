@@ -41,23 +41,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="api\master\dal\GenericDAL.cs" />
+    <Compile Include="api\master\dal\SignInDAL.cs" />
+    <Compile Include="api\master\dal\UserDAL.cs" />
     <Compile Include="api\master\helper\SqlHelper.cs" />
     <Compile Include="api\master\model\Company.cs" />
     <Compile Include="api\master\model\InventoryDocumentation.cs" />
     <Compile Include="api\master\model\Permissions.cs" />
     <Compile Include="api\master\model\ProductDocument.cs" />
-<<<<<<< HEAD
-=======
     <Compile Include="api\master\model\ProductInventory.cs" />
->>>>>>> 68d5ff30558b00241ab151cd83a07d666f5d104b
     <Compile Include="api\master\model\ProductType.cs" />
     <Compile Include="api\master\model\Role.cs" />
     <Compile Include="api\master\model\RolePermission.cs" />
     <Compile Include="api\master\model\SignIn.cs" />
     <Compile Include="api\master\model\User.cs" />
+    <Compile Include="api\transaction\Transaction.cs" />
     <Compile Include="ComponentIntegrationFacade.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="api\transaction\Transaction.cs" />
+    <Compile Include="api\transaction\ITransaction.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

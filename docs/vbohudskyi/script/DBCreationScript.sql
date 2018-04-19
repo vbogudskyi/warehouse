@@ -144,3 +144,10 @@ ADD CONSTRAINT df_userCompanyID DEFAULT 'COM-001' FOR CID;
 ALTER TABLE ProductInventory
 ADD CONSTRAINT df_defult_product_type DEFAULT 1 FOR TID;
 
+ALTER TABLE Users
+ADD CONSTRAINT df_userID DEFAULT 'USR'+ CONVERT(varchar(10), NEWID()) FOR UID;
+
+EXEC sp_helpconstraint Users;
+
+ALTER TABLE SignIn
+ADD CONSTRAINT uq_ip_address UNIQUE(IP);
