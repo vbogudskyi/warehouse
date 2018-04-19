@@ -43,8 +43,10 @@
     <Compile Include="api\master\dal\GenericDAL.cs" />
     <Compile Include="api\master\helper\SqlHelper.cs" />
     <Compile Include="api\master\model\Company.cs" />
+    <Compile Include="api\master\model\InventoryDocumentation.cs" />
     <Compile Include="api\master\model\Permissions.cs" />
     <Compile Include="api\master\model\ProductDocument.cs" />
+    <Compile Include="api\master\model\ProductInventory.cs" />
     <Compile Include="api\master\model\ProductType.cs" />
     <Compile Include="api\master\model\Role.cs" />
     <Compile Include="api\master\model\RolePermission.cs" />

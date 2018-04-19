@@ -132,3 +132,15 @@ CREATE TABLE InventoryDocumetation
    CONSTRAINT fk_inv_documentID FOREIGN KEY(DocumentID) REFERENCES ProductDocument(DocumentID)
 )
 
+ALTER TABLE ProductDocument
+ADD Quantity int NOT NULL DEFAULT 0;
+
+ALTER TABLE ProductInventory
+ADD TotalQuantity int NOT NULL DEFAULT 0;
+
+ALTER TABLE Users
+ADD CONSTRAINT df_userCompanyID DEFAULT 'COM-001' FOR CID;
+
+ALTER TABLE ProductInventory
+ADD CONSTRAINT df_defult_product_type DEFAULT 1 FOR TID;
+
