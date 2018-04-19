@@ -15,6 +15,7 @@ namespace ComponentsIntergrationMiddleware.api.master.model
         private String fname;
         private String rsa;
         private String login;
+        private int companyID;
         private bool active;
 
         public int ID
@@ -63,6 +64,12 @@ namespace ComponentsIntergrationMiddleware.api.master.model
         {
             get { return active; }
             set { active = value; }
+        }
+
+        public int CompanyID
+        {
+            get { return companyID; }
+            set { companyID = value; }
         }
     }
 }

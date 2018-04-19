@@ -42,8 +42,10 @@
   <ItemGroup>
     <Compile Include="api\master\dal\GenericDAL.cs" />
     <Compile Include="api\master\helper\SqlHelper.cs" />
+    <Compile Include="api\master\model\Company.cs" />
     <Compile Include="api\master\model\Permissions.cs" />
     <Compile Include="api\master\model\Role.cs" />
+    <Compile Include="api\master\model\RolePermission.cs" />
     <Compile Include="api\master\model\SignIn.cs" />
     <Compile Include="api\master\model\User.cs" />
     <Compile Include="ComponentIntegrationFacade.cs" />

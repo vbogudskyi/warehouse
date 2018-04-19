@@ -78,3 +78,56 @@ ADD CONSTRAINT ck_ip_address CHECK(IP LIKE '%[0-9]%.%[0-9]%.%[0-9]%.%[0-9]%');
 
 ALTER TABLE Users
 ADD CONSTRAINT uq_login UNIQUE(LOGIN);
+
+CREATE TABLE Company
+(
+   ID int IDENTITY NOT NULL,
+   CID varchar(15) PRIMARY KEY,
+   NAME varchar(50) NOT NULL UNIQUE,
+   DESCRIPTION varchar(100)
+) 
+
+ALTER TABLE Users
+ADD CID varchar(15) NOT NULL;
+
+ALTER TABLE Users
+ADD CONSTRAINT fk_companyID FOREIGN KEY (CID) REFERENCES Company(CID);
+
+EXEC sp_helpconstraint Users;
+
+CREATE TABLE ProductType
+(
+   TID int IDENTITY PRIMARY KEY,
+   Name varchar(20) NOT NULL UNIQUE
+)
+
+CREATE TABLE ProductDocument
+(
+   ID int IDENTITY NOT NULL,
+   DocumentID varchar(15) PRIMARY KEY,
+   Name varchar(25) NOT NULL,
+   PrID varchar(10) NOT NULL,
+   CONSTRAINT fk_prodID FOREIGN KEY(PrID) REFERENCES ProductInventory(PrID),
+);
+
+CREATE TABLE InventoryDocumetation
+(
+   ID int IDENTITY PRIMARY KEY,
+   UID varchar(10) NOT NULL,
+   DocumentID varchar(15) NOT NULL,
+   CONSTRAINT fk_inv_userID FOREIGN KEY(UID) REFERENCES Users(UID),
+   CONSTRAINT fk_inv_documentID FOREIGN KEY(DocumentID) REFERENCES ProductDocument(DocumentID)
+)
+
+CREATE TABLE ProductInventory
+(
+   ID int IDENTITY NOT NULL,
+   PrID varchar(10) PRIMARY KEY,
+   Description varchar(100),
+   Active bit DEFAULT 1,
+)
+
+ALTER TABLE ProductInventory
+ADD TID int NOT NULL FOREIGN KEY REFERENCES ProductType(TID)
+
+EXEC sp_helpconstraint ProductInventory;
