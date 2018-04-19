@@ -45,6 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LogInSignUp\LogInClass.cs" />
+    <Compile Include="LogInSignUp\SignUpClass.cs" />
     <Compile Include="PermissionManager.cs">
       <SubType>Form</SubType>
     </Compile>

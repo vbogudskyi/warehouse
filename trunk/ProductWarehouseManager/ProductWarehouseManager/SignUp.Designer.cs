@@ -59,17 +59,19 @@
             this.btn_Browse.Text = "Browse...";
             this.toolTip1.SetToolTip(this.btn_Browse, "Browse...");
             this.btn_Browse.UseVisualStyleBackColor = true;
+            this.btn_Browse.Click += new System.EventHandler(this.btn_Browse_Click);
             // 
             // btn_SignUp
             // 
             this.btn_SignUp.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SignUp.Location = new System.Drawing.Point(12, 415);
+            this.btn_SignUp.Location = new System.Drawing.Point(12, 388);
             this.btn_SignUp.Name = "btn_SignUp";
             this.btn_SignUp.Size = new System.Drawing.Size(75, 24);
             this.btn_SignUp.TabIndex = 42;
             this.btn_SignUp.Text = "Sign Up";
             this.toolTip1.SetToolTip(this.btn_SignUp, "Sign Up");
             this.btn_SignUp.UseVisualStyleBackColor = true;
+            this.btn_SignUp.Click += new System.EventHandler(this.btn_SignUp_Click);
             // 
             // cmbx_Role
             // 
@@ -215,7 +217,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(313, 451);
+            this.ClientSize = new System.Drawing.Size(313, 424);
             this.Controls.Add(this.txt_Password2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btn_Browse);
@@ -234,7 +236,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "SignUp";
-            this.Text = "s";
+            this.Text = "Sign Up";
             this.Load += new System.EventHandler(this.SignUp_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
