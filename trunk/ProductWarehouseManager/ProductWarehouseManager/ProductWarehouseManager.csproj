@@ -45,6 +45,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PermissionManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PermissionManager.Designer.cs">
+      <DependentUpon>PermissionManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductManager.Designer.cs">
+      <DependentUpon>ProductManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoleManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoleManager.Designer.cs">
+      <DependentUpon>RoleManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +83,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PermissionManager.resx">
+      <DependentUpon>PermissionManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductManager.resx">
+      <DependentUpon>ProductManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoleManager.resx">
+      <DependentUpon>RoleManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserManager.resx">
       <DependentUpon>UserManager.cs</DependentUpon>
     </EmbeddedResource>

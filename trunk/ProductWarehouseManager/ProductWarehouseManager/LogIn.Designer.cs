@@ -28,19 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogIn));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lnklbl_SignUp = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
             this.lb_DateTime = new System.Windows.Forms.Label();
             this.chkbx_Trust = new System.Windows.Forms.CheckBox();
-            this.btn_SignUp = new System.Windows.Forms.Button();
+            this.btn_SignIn = new System.Windows.Forms.Button();
             this.txt_Password = new System.Windows.Forms.TextBox();
             this.txt_UserId = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // panel1
@@ -64,6 +66,7 @@
             this.lnklbl_SignUp.TabIndex = 21;
             this.lnklbl_SignUp.TabStop = true;
             this.lnklbl_SignUp.Text = "Sign Up Here";
+            this.toolTip1.SetToolTip(this.lnklbl_SignUp, "Sign Up");
             // 
             // label4
             // 
@@ -91,17 +94,19 @@
             this.chkbx_Trust.Size = new System.Drawing.Size(79, 17);
             this.chkbx_Trust.TabIndex = 18;
             this.chkbx_Trust.Text = "Trusted PC";
+            this.toolTip1.SetToolTip(this.chkbx_Trust, "Trust");
             this.chkbx_Trust.UseVisualStyleBackColor = true;
             // 
-            // btn_SignUp
+            // btn_SignIn
             // 
-            this.btn_SignUp.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SignUp.Location = new System.Drawing.Point(388, 196);
-            this.btn_SignUp.Name = "btn_SignUp";
-            this.btn_SignUp.Size = new System.Drawing.Size(75, 28);
-            this.btn_SignUp.TabIndex = 17;
-            this.btn_SignUp.Text = "Sign Up";
-            this.btn_SignUp.UseVisualStyleBackColor = true;
+            this.btn_SignIn.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SignIn.Location = new System.Drawing.Point(388, 196);
+            this.btn_SignIn.Name = "btn_SignIn";
+            this.btn_SignIn.Size = new System.Drawing.Size(75, 28);
+            this.btn_SignIn.TabIndex = 17;
+            this.btn_SignIn.Text = "Sign In";
+            this.toolTip1.SetToolTip(this.btn_SignIn, "Sign In");
+            this.btn_SignIn.UseVisualStyleBackColor = true;
             // 
             // txt_Password
             // 
@@ -170,7 +175,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lb_DateTime);
             this.Controls.Add(this.chkbx_Trust);
-            this.Controls.Add(this.btn_SignUp);
+            this.Controls.Add(this.btn_SignIn);
             this.Controls.Add(this.txt_Password);
             this.Controls.Add(this.txt_UserId);
             this.Controls.Add(this.label3);
@@ -190,12 +195,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lb_DateTime;
         private System.Windows.Forms.CheckBox chkbx_Trust;
-        private System.Windows.Forms.Button btn_SignUp;
+        private System.Windows.Forms.Button btn_SignIn;
         private System.Windows.Forms.TextBox txt_Password;
         private System.Windows.Forms.TextBox txt_UserId;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

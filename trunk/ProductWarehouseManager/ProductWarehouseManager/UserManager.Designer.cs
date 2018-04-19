@@ -1,6 +1,6 @@
 ﻿namespace ProductWarehouseManager
 {
-    partial class UserManager
+    partial class s
     {
         /// <summary>
         /// Required designer variable.
@@ -28,30 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserManager));
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(s));
             this.btn_Save = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lstbx_UserManager = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txt_LastName = new System.Windows.Forms.TextBox();
+            this.txt_FirstName = new System.Windows.Forms.TextBox();
+            this.txt_RSA = new System.Windows.Forms.TextBox();
+            this.txt_LogIn = new System.Windows.Forms.TextBox();
+            this.txt_Password = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.cmbx_Role = new System.Windows.Forms.ComboBox();
+            this.txt_IP = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txt_Company = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.picbx_Update = new System.Windows.Forms.PictureBox();
+            this.picbx_Delete = new System.Windows.Forms.PictureBox();
+            this.picbx_Suspend = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.picbx_Update)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbx_Delete)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbx_Suspend)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Save
@@ -61,15 +64,16 @@
             this.btn_Save.Size = new System.Drawing.Size(75, 24);
             this.btn_Save.TabIndex = 4;
             this.btn_Save.Text = "Save";
+            this.toolTip1.SetToolTip(this.btn_Save, "Save");
             this.btn_Save.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // lstbx_UserManager
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(12, 17);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(200, 303);
-            this.listBox1.TabIndex = 6;
+            this.lstbx_UserManager.FormattingEnabled = true;
+            this.lstbx_UserManager.Location = new System.Drawing.Point(12, 17);
+            this.lstbx_UserManager.Name = "lstbx_UserManager";
+            this.lstbx_UserManager.Size = new System.Drawing.Size(200, 303);
+            this.lstbx_UserManager.TabIndex = 6;
             // 
             // label1
             // 
@@ -107,40 +111,40 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "LOG IN";
             // 
-            // textBox1
+            // txt_LastName
             // 
-            this.textBox1.Location = new System.Drawing.Point(292, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 11;
+            this.txt_LastName.Location = new System.Drawing.Point(293, 29);
+            this.txt_LastName.Name = "txt_LastName";
+            this.txt_LastName.Size = new System.Drawing.Size(100, 20);
+            this.txt_LastName.TabIndex = 11;
             // 
-            // textBox2
+            // txt_FirstName
             // 
-            this.textBox2.Location = new System.Drawing.Point(293, 59);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 12;
+            this.txt_FirstName.Location = new System.Drawing.Point(293, 59);
+            this.txt_FirstName.Name = "txt_FirstName";
+            this.txt_FirstName.Size = new System.Drawing.Size(100, 20);
+            this.txt_FirstName.TabIndex = 12;
             // 
-            // textBox3
+            // txt_RSA
             // 
-            this.textBox3.Location = new System.Drawing.Point(293, 91);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 13;
+            this.txt_RSA.Location = new System.Drawing.Point(293, 91);
+            this.txt_RSA.Name = "txt_RSA";
+            this.txt_RSA.Size = new System.Drawing.Size(100, 20);
+            this.txt_RSA.TabIndex = 13;
             // 
-            // textBox4
+            // txt_LogIn
             // 
-            this.textBox4.Location = new System.Drawing.Point(293, 129);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 14;
+            this.txt_LogIn.Location = new System.Drawing.Point(293, 129);
+            this.txt_LogIn.Name = "txt_LogIn";
+            this.txt_LogIn.Size = new System.Drawing.Size(100, 20);
+            this.txt_LogIn.TabIndex = 14;
             // 
-            // textBox5
+            // txt_Password
             // 
-            this.textBox5.Location = new System.Drawing.Point(293, 164);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 16;
+            this.txt_Password.Location = new System.Drawing.Point(293, 164);
+            this.txt_Password.Name = "txt_Password";
+            this.txt_Password.Size = new System.Drawing.Size(100, 20);
+            this.txt_Password.TabIndex = 16;
             // 
             // label5
             // 
@@ -156,26 +160,26 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(231, 207);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 13);
+            this.label6.Size = new System.Drawing.Size(34, 13);
             this.label6.TabIndex = 17;
-            this.label6.Text = "Status";
+            this.label6.Text = "Roles";
             // 
-            // comboBox1
+            // cmbx_Role
             // 
-            this.comboBox1.Enabled = false;
-            this.comboBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(293, 207);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 24);
-            this.comboBox1.TabIndex = 42;
+            this.cmbx_Role.Enabled = false;
+            this.cmbx_Role.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbx_Role.FormattingEnabled = true;
+            this.cmbx_Role.Location = new System.Drawing.Point(293, 207);
+            this.cmbx_Role.Name = "cmbx_Role";
+            this.cmbx_Role.Size = new System.Drawing.Size(100, 24);
+            this.cmbx_Role.TabIndex = 42;
             // 
-            // textBox6
+            // txt_IP
             // 
-            this.textBox6.Location = new System.Drawing.Point(298, 246);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 44;
+            this.txt_IP.Location = new System.Drawing.Point(293, 246);
+            this.txt_IP.Name = "txt_IP";
+            this.txt_IP.Size = new System.Drawing.Size(100, 20);
+            this.txt_IP.TabIndex = 44;
             // 
             // label7
             // 
@@ -186,83 +190,85 @@
             this.label7.TabIndex = 43;
             this.label7.Text = "IP";
             // 
-            // textBox7
+            // txt_Company
             // 
-            this.textBox7.Location = new System.Drawing.Point(298, 291);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 46;
+            this.txt_Company.Location = new System.Drawing.Point(293, 291);
+            this.txt_Company.Name = "txt_Company";
+            this.txt_Company.Size = new System.Drawing.Size(100, 20);
+            this.txt_Company.TabIndex = 46;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(236, 294);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(30, 13);
+            this.label8.Size = new System.Drawing.Size(51, 13);
             this.label8.TabIndex = 45;
-            this.label8.Text = "MAC";
+            this.label8.Text = "Company";
             // 
-            // pictureBox1
+            // picbx_Update
             // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(80, 326);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(26, 23);
-            this.pictureBox1.TabIndex = 47;
-            this.pictureBox1.TabStop = false;
+            this.picbx_Update.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picbx_Update.BackgroundImage")));
+            this.picbx_Update.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picbx_Update.Location = new System.Drawing.Point(122, 326);
+            this.picbx_Update.Name = "picbx_Update";
+            this.picbx_Update.Size = new System.Drawing.Size(26, 23);
+            this.picbx_Update.TabIndex = 47;
+            this.picbx_Update.TabStop = false;
+            this.toolTip1.SetToolTip(this.picbx_Update, "Update");
             // 
-            // pictureBox2
+            // picbx_Delete
             // 
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(112, 326);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(26, 23);
-            this.pictureBox2.TabIndex = 48;
-            this.pictureBox2.TabStop = false;
+            this.picbx_Delete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picbx_Delete.BackgroundImage")));
+            this.picbx_Delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picbx_Delete.Location = new System.Drawing.Point(154, 326);
+            this.picbx_Delete.Name = "picbx_Delete";
+            this.picbx_Delete.Size = new System.Drawing.Size(26, 23);
+            this.picbx_Delete.TabIndex = 48;
+            this.picbx_Delete.TabStop = false;
+            this.toolTip1.SetToolTip(this.picbx_Delete, "Delete");
             // 
-            // checkBox1
+            // picbx_Suspend
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(144, 331);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(68, 17);
-            this.checkBox1.TabIndex = 49;
-            this.checkBox1.Text = "Suspend";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.picbx_Suspend.Location = new System.Drawing.Point(186, 326);
+            this.picbx_Suspend.Name = "picbx_Suspend";
+            this.picbx_Suspend.Size = new System.Drawing.Size(26, 23);
+            this.picbx_Suspend.TabIndex = 50;
+            this.picbx_Suspend.TabStop = false;
+            this.toolTip1.SetToolTip(this.picbx_Suspend, "Suspend/Unsuspend");
             // 
-            // UserManager
+            // s
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(405, 396);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.picbx_Suspend);
+            this.Controls.Add(this.picbx_Delete);
+            this.Controls.Add(this.picbx_Update);
+            this.Controls.Add(this.txt_Company);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txt_IP);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbx_Role);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txt_Password);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_LogIn);
+            this.Controls.Add(this.txt_RSA);
+            this.Controls.Add(this.txt_FirstName);
+            this.Controls.Add(this.txt_LastName);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.lstbx_UserManager);
             this.Controls.Add(this.btn_Save);
-            this.Name = "UserManager";
+            this.Name = "s";
             this.Text = "Product WareHouse User Manager";
             this.Load += new System.EventHandler(this.UserManager_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbx_Update)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbx_Delete)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbx_Suspend)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,25 +276,26 @@
 
         #endregion
         private System.Windows.Forms.Button btn_Save;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lstbx_UserManager;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txt_LastName;
+        private System.Windows.Forms.TextBox txt_FirstName;
+        private System.Windows.Forms.TextBox txt_RSA;
+        private System.Windows.Forms.TextBox txt_LogIn;
+        private System.Windows.Forms.TextBox txt_Password;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.ComboBox cmbx_Role;
+        private System.Windows.Forms.TextBox txt_IP;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txt_Company;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.PictureBox picbx_Update;
+        private System.Windows.Forms.PictureBox picbx_Delete;
+        private System.Windows.Forms.PictureBox picbx_Suspend;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

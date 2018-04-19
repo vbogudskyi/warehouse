@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btn_Browse = new System.Windows.Forms.Button();
             this.btn_SignUp = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cmbx_Role = new System.Windows.Forms.ComboBox();
+            this.txt_RSA = new System.Windows.Forms.TextBox();
+            this.txt_LastName = new System.Windows.Forms.TextBox();
+            this.txt_FirstName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -43,8 +44,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txt_Password2 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // btn_Browse
@@ -55,6 +57,7 @@
             this.btn_Browse.Size = new System.Drawing.Size(75, 24);
             this.btn_Browse.TabIndex = 43;
             this.btn_Browse.Text = "Browse...";
+            this.toolTip1.SetToolTip(this.btn_Browse, "Browse...");
             this.btn_Browse.UseVisualStyleBackColor = true;
             // 
             // btn_SignUp
@@ -65,41 +68,42 @@
             this.btn_SignUp.Size = new System.Drawing.Size(75, 24);
             this.btn_SignUp.TabIndex = 42;
             this.btn_SignUp.Text = "Sign Up";
+            this.toolTip1.SetToolTip(this.btn_SignUp, "Sign Up");
             this.btn_SignUp.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cmbx_Role
             // 
-            this.comboBox1.Enabled = false;
-            this.comboBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(96, 342);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(205, 24);
-            this.comboBox1.TabIndex = 41;
+            this.cmbx_Role.Enabled = false;
+            this.cmbx_Role.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbx_Role.FormattingEnabled = true;
+            this.cmbx_Role.Location = new System.Drawing.Point(96, 342);
+            this.cmbx_Role.Name = "cmbx_Role";
+            this.cmbx_Role.Size = new System.Drawing.Size(205, 24);
+            this.cmbx_Role.TabIndex = 41;
             // 
-            // textBox3
+            // txt_RSA
             // 
-            this.textBox3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(96, 277);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(205, 22);
-            this.textBox3.TabIndex = 40;
+            this.txt_RSA.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_RSA.Location = new System.Drawing.Point(96, 277);
+            this.txt_RSA.Name = "txt_RSA";
+            this.txt_RSA.Size = new System.Drawing.Size(205, 22);
+            this.txt_RSA.TabIndex = 40;
             // 
-            // textBox2
+            // txt_LastName
             // 
-            this.textBox2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(96, 237);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(205, 22);
-            this.textBox2.TabIndex = 39;
+            this.txt_LastName.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_LastName.Location = new System.Drawing.Point(96, 237);
+            this.txt_LastName.Name = "txt_LastName";
+            this.txt_LastName.Size = new System.Drawing.Size(205, 22);
+            this.txt_LastName.TabIndex = 39;
             // 
-            // textBox1
+            // txt_FirstName
             // 
-            this.textBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(96, 197);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(205, 22);
-            this.textBox1.TabIndex = 38;
+            this.txt_FirstName.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_FirstName.Location = new System.Drawing.Point(96, 197);
+            this.txt_FirstName.Name = "txt_FirstName";
+            this.txt_FirstName.Size = new System.Drawing.Size(205, 22);
+            this.txt_FirstName.TabIndex = 38;
             // 
             // label7
             // 
@@ -107,9 +111,9 @@
             this.label7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(12, 348);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 16);
+            this.label7.Size = new System.Drawing.Size(45, 16);
             this.label7.TabIndex = 37;
-            this.label7.Text = "Status: ";
+            this.label7.Text = "Roles:";
             // 
             // label6
             // 
@@ -129,7 +133,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(84, 16);
             this.label5.TabIndex = 35;
-            this.label5.Text = "Last Nmae*: ";
+            this.label5.Text = "Last Name*: ";
             // 
             // label4
             // 
@@ -139,7 +143,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 16);
             this.label4.TabIndex = 34;
-            this.label4.Text = "First Nmae*: ";
+            this.label4.Text = "First Name*: ";
             // 
             // txt_Password
             // 
@@ -188,14 +192,14 @@
             this.label1.Text = "Product WareHouse Management System";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox4
+            // txt_Password2
             // 
-            this.textBox4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(96, 161);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(205, 22);
-            this.textBox4.TabIndex = 45;
-            this.textBox4.UseSystemPasswordChar = true;
+            this.txt_Password2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Password2.Location = new System.Drawing.Point(96, 161);
+            this.txt_Password2.Name = "txt_Password2";
+            this.txt_Password2.Size = new System.Drawing.Size(205, 22);
+            this.txt_Password2.TabIndex = 45;
+            this.txt_Password2.UseSystemPasswordChar = true;
             // 
             // label8
             // 
@@ -212,14 +216,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(313, 451);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txt_Password2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btn_Browse);
             this.Controls.Add(this.btn_SignUp);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cmbx_Role);
+            this.Controls.Add(this.txt_RSA);
+            this.Controls.Add(this.txt_LastName);
+            this.Controls.Add(this.txt_FirstName);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -230,7 +234,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "SignUp";
-            this.Text = "Product WareHouse MS, SignUp";
+            this.Text = "s";
             this.Load += new System.EventHandler(this.SignUp_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -241,10 +245,10 @@
 
         private System.Windows.Forms.Button btn_Browse;
         private System.Windows.Forms.Button btn_SignUp;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox cmbx_Role;
+        private System.Windows.Forms.TextBox txt_RSA;
+        private System.Windows.Forms.TextBox txt_LastName;
+        private System.Windows.Forms.TextBox txt_FirstName;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -254,8 +258,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txt_Password2;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
