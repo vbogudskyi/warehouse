@@ -46,7 +46,10 @@
     <Compile Include="api\master\model\InventoryDocumentation.cs" />
     <Compile Include="api\master\model\Permissions.cs" />
     <Compile Include="api\master\model\ProductDocument.cs" />
+<<<<<<< HEAD
+=======
     <Compile Include="api\master\model\ProductInventory.cs" />
+>>>>>>> 68d5ff30558b00241ab151cd83a07d666f5d104b
     <Compile Include="api\master\model\ProductType.cs" />
     <Compile Include="api\master\model\Role.cs" />
     <Compile Include="api\master\model\RolePermission.cs" />

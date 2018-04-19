@@ -45,19 +45,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddProductManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProductManager.Designer.cs">
+      <DependentUpon>AddProductManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomePage.Designer.cs">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </Compile>
     <Compile Include="LogInSignUp\LogInClass.cs" />
     <Compile Include="LogInSignUp\SignUpClass.cs" />
-    <Compile Include="PermissionManager.cs">
+    <Compile Include="UpdateProductManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PermissionManager.Designer.cs">
-      <DependentUpon>PermissionManager.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ProductManager.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ProductManager.Designer.cs">
-      <DependentUpon>ProductManager.cs</DependentUpon>
+    <Compile Include="UpdateProductManager.Designer.cs">
+      <DependentUpon>UpdateProductManager.cs</DependentUpon>
     </Compile>
     <Compile Include="RoleManager.cs">
       <SubType>Form</SubType>
@@ -85,11 +91,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="PermissionManager.resx">
-      <DependentUpon>PermissionManager.cs</DependentUpon>
+    <EmbeddedResource Include="AddProductManager.resx">
+      <DependentUpon>AddProductManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProductManager.resx">
-      <DependentUpon>ProductManager.cs</DependentUpon>
+    <EmbeddedResource Include="HomePage.resx">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateProductManager.resx">
+      <DependentUpon>UpdateProductManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RoleManager.resx">
       <DependentUpon>RoleManager.cs</DependentUpon>

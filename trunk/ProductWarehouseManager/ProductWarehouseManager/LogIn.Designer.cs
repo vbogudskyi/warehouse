@@ -43,7 +43,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.lnklbl_ForgotPassword = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // panel1
@@ -167,25 +166,11 @@
             this.panel2.Size = new System.Drawing.Size(1, 293);
             this.panel2.TabIndex = 23;
             // 
-            // lnklbl_ForgotPassword
-            // 
-            this.lnklbl_ForgotPassword.AutoSize = true;
-            this.lnklbl_ForgotPassword.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnklbl_ForgotPassword.Location = new System.Drawing.Point(385, 227);
-            this.lnklbl_ForgotPassword.Name = "lnklbl_ForgotPassword";
-            this.lnklbl_ForgotPassword.Size = new System.Drawing.Size(96, 14);
-            this.lnklbl_ForgotPassword.TabIndex = 24;
-            this.lnklbl_ForgotPassword.TabStop = true;
-            this.lnklbl_ForgotPassword.Text = "Forgot Password?";
-            this.toolTip1.SetToolTip(this.lnklbl_ForgotPassword, "Sign Up");
-            this.lnklbl_ForgotPassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnklbl_ForgotPassword_LinkClicked);
-            // 
             // LogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(709, 375);
-            this.Controls.Add(this.lnklbl_ForgotPassword);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lnklbl_SignUp);
@@ -221,6 +206,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.LinkLabel lnklbl_ForgotPassword;
     }
 }

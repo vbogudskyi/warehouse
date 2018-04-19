@@ -50,12 +50,18 @@ namespace ProductWarehouseManager
         {
             OpenFileDialog browse = new OpenFileDialog();
             browse.InitialDirectory = @"C:\";
+          //  browse = "*.rca"
             
             if (browse.ShowDialog() == DialogResult.OK)
             {
                 //need to figure out how to select the RSA from the list
                 MessageBox.Show("Need to finish the logic");
             }
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
 
         }
     }
