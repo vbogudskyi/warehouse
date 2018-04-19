@@ -2,7 +2,7 @@ CREATE DATABASE ProductWarehouse
 ON
 ( 
     NAME = "PWarehouse", 
-	FILENAME = "C:\Program Files\Microsoft SQL Server\MSSQL14.SQLEXPRESS\MSSQL\DATA\ProductWarehouse.mdf",
+	FILENAME = "C:\Program Files\Microsoft SQL Server\MSSQL11.MYSQLSERVER\MSSQL\DATA\ProductWareHouse.mdf",
 	SIZE = 10MB,
 	MAXSIZE = 100MB,
 	FILEGROWTH = 10MB
@@ -10,7 +10,7 @@ ON
 LOG ON
 (
    NAME = "PLog",
-   FILENAME = "C:\Program Files\Microsoft SQL Server\MSSQL14.SQLEXPRESS\MSSQL\DATA\ProductWarehouseLog.ldf",
+   FILENAME = "C:\Program Files\Microsoft SQL Server\MSSQL11.MYSQLSERVER\MSSQL\DATA\ProductWareHouse.ldf",
    SIZE = 10MB,
    MAXSIZE = 50MB,
    FILEGROWTH = 10MB
@@ -101,6 +101,19 @@ CREATE TABLE ProductType
    Name varchar(20) NOT NULL UNIQUE
 )
 
+CREATE TABLE ProductInventory
+(
+   ID int IDENTITY NOT NULL,
+   PrID varchar(10) PRIMARY KEY,
+   Description varchar(100),
+   Active bit DEFAULT 1,
+)
+
+ALTER TABLE ProductInventory
+ADD TID int NOT NULL FOREIGN KEY REFERENCES ProductType(TID)
+
+EXEC sp_helpconstraint ProductInventory;
+
 CREATE TABLE ProductDocument
 (
    ID int IDENTITY NOT NULL,
@@ -119,15 +132,3 @@ CREATE TABLE InventoryDocumetation
    CONSTRAINT fk_inv_documentID FOREIGN KEY(DocumentID) REFERENCES ProductDocument(DocumentID)
 )
 
-CREATE TABLE ProductInventory
-(
-   ID int IDENTITY NOT NULL,
-   PrID varchar(10) PRIMARY KEY,
-   Description varchar(100),
-   Active bit DEFAULT 1,
-)
-
-ALTER TABLE ProductInventory
-ADD TID int NOT NULL FOREIGN KEY REFERENCES ProductType(TID)
-
-EXEC sp_helpconstraint ProductInventory;

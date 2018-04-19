@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace ProductWarehouseManager
 {
-    public partial class s : Form
+    public partial class RoleManager : Form
     {
-        public s()
+        public RoleManager()
         {
             InitializeComponent();
         }
 
-        private void UserManager_Load(object sender, EventArgs e)
+        private void RoleManager_Load(object sender, EventArgs e)
         {
 
         }
