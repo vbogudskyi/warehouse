@@ -6,13 +6,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace ProductWarehouseManager.LogInSignUp
 {
     class SignUpClass
     {
         SqlConnection con;
         SqlCommand cmd;
-       
+
+
 
         public SignUpClass()
         {
