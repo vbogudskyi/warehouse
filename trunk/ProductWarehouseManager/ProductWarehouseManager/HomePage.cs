@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProductWarehouseManager
 {
-    public partial class PermissionManager : Form
+    public partial class HomePage : Form
     {
-        public PermissionManager()
+        public HomePage()
         {
             InitializeComponent();
         }

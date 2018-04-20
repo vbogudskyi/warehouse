@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProductWarehouseManager
 {
-    public partial class ProductManager : Form
+    public partial class UpdateProductManager : Form
     {
-        public ProductManager()
+        public UpdateProductManager()
         {
             InitializeComponent();
         }

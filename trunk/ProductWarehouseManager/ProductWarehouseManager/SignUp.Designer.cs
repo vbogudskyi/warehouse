@@ -47,6 +47,8 @@
             this.txt_Password2 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label9 = new System.Windows.Forms.Label();
+            this.cmbx_Company = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btn_Browse
@@ -64,7 +66,7 @@
             // btn_SignUp
             // 
             this.btn_SignUp.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SignUp.Location = new System.Drawing.Point(12, 388);
+            this.btn_SignUp.Location = new System.Drawing.Point(11, 423);
             this.btn_SignUp.Name = "btn_SignUp";
             this.btn_SignUp.Size = new System.Drawing.Size(75, 24);
             this.btn_SignUp.TabIndex = 42;
@@ -213,11 +215,34 @@
             this.label8.TabIndex = 44;
             this.label8.Text = "Password*: ";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(16, 385);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(67, 16);
+            this.label9.TabIndex = 46;
+            this.label9.Text = "Company:";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // cmbx_Company
+            // 
+            this.cmbx_Company.Enabled = false;
+            this.cmbx_Company.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbx_Company.FormattingEnabled = true;
+            this.cmbx_Company.Location = new System.Drawing.Point(96, 385);
+            this.cmbx_Company.Name = "cmbx_Company";
+            this.cmbx_Company.Size = new System.Drawing.Size(205, 24);
+            this.cmbx_Company.TabIndex = 47;
+            // 
             // SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(313, 424);
+            this.ClientSize = new System.Drawing.Size(313, 459);
+            this.Controls.Add(this.cmbx_Company);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.txt_Password2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btn_Browse);
@@ -263,6 +288,8 @@
         private System.Windows.Forms.TextBox txt_Password2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox cmbx_Company;
     }
 }
 
