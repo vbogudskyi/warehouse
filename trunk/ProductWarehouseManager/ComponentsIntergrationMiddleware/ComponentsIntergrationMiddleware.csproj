@@ -44,6 +44,8 @@
     <Compile Include="api\master\helper\SqlHelper.cs" />
     <Compile Include="api\master\model\Company.cs" />
     <Compile Include="api\master\model\Permissions.cs" />
+    <Compile Include="api\master\model\ProductDocument.cs" />
+    <Compile Include="api\master\model\ProductType.cs" />
     <Compile Include="api\master\model\Role.cs" />
     <Compile Include="api\master\model\RolePermission.cs" />
     <Compile Include="api\master\model\SignIn.cs" />
