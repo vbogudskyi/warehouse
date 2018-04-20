@@ -9,7 +9,7 @@ namespace ComponentsIntergrationMiddleware.api.master.model
     sealed class Company
     {
         private int id;
-        private int cid;
+        private String cid;
         private String name;
         private String description;
 
@@ -19,7 +19,7 @@ namespace ComponentsIntergrationMiddleware.api.master.model
             set { id = value; }
         }
 
-        public int CID
+        public String CID
         {
             get { return cid; }
             set { cid = value; }

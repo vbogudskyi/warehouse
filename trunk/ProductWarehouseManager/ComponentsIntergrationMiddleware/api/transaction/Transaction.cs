@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ComponentsIntergrationMiddleware.api.master.dal;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +7,18 @@ using System.Threading.Tasks;
 
 namespace ComponentsIntergrationMiddleware.api.transaction
 {
-    abstract class Transaction
+    class Transaction<T> : ITransaction<T>
     {
-        protected abstract void execute();
-        protected abstract void cancel();
+        private GenericDAL<T> dal;
+
+        public void cancel()
+        {
+            throw new NotImplementedException();
+        }
+
+        public T execute()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
