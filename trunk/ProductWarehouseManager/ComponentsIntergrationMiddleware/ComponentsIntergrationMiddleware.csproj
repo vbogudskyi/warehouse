@@ -40,7 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="api\master\dal\CompanyDAL.cs" />
     <Compile Include="api\master\dal\GenericDAL.cs" />
+    <Compile Include="api\master\dal\PermissionsDAL.cs" />
+    <Compile Include="api\master\dal\RoleDAL.cs" />
     <Compile Include="api\master\dal\SignInDAL.cs" />
     <Compile Include="api\master\dal\UserDAL.cs" />
     <Compile Include="api\master\helper\SqlHelper.cs" />
@@ -55,6 +58,7 @@
     <Compile Include="api\master\model\SignIn.cs" />
     <Compile Include="api\master\model\User.cs" />
     <Compile Include="api\transaction\Transaction.cs" />
+    <Compile Include="api\utils\NetworkUtils.cs" />
     <Compile Include="ComponentIntegrationFacade.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="api\transaction\ITransaction.cs" />

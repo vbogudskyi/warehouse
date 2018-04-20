@@ -20,6 +20,7 @@ namespace ComponentsIntergrationMiddleware.api.master.model
         public String Name
         {
             get { return name; }
+            set { name = value; }
         }
     }
 }
