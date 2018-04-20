@@ -51,6 +51,12 @@
     <Compile Include="AddProductManager.Designer.cs">
       <DependentUpon>AddProductManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="BulkLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BulkLoad.Designer.cs">
+      <DependentUpon>BulkLoad.cs</DependentUpon>
+    </Compile>
     <Compile Include="HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +65,12 @@
     </Compile>
     <Compile Include="LogInSignUp\LogInClass.cs" />
     <Compile Include="LogInSignUp\SignUpClass.cs" />
+    <Compile Include="MyAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyAccount.Designer.cs">
+      <DependentUpon>MyAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateProductManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,8 +106,14 @@
     <EmbeddedResource Include="AddProductManager.resx">
       <DependentUpon>AddProductManager.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BulkLoad.resx">
+      <DependentUpon>BulkLoad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyAccount.resx">
+      <DependentUpon>MyAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateProductManager.resx">
       <DependentUpon>UpdateProductManager.cs</DependentUpon>

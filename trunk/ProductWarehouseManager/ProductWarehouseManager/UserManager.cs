@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProductWarehouseManager
 {
-    public partial class s : Form
+    public partial class UserManager : Form
     {
-        public s()
+        public UserManager()
         {
             InitializeComponent();
         }

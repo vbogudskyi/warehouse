@@ -15,7 +15,7 @@ namespace ProductWarehouseManager
     {
         //Enter code here for your version of username and userpassword 
         LogInClass login = new LogInClass("admin", "1234");
-
+        HomePage homePage;
         public LogIn()
         {
             InitializeComponent();
@@ -35,6 +35,8 @@ namespace ProductWarehouseManager
             if (login.IsLoggedIn(user, pass))
             {
                 MessageBox.Show("You are logged in successfully");
+                homePage = new HomePage();
+                homePage.Show();
             }
             else
             {
@@ -43,11 +45,6 @@ namespace ProductWarehouseManager
             }
         }
 
-        private void lnklbl_ForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            //enter your code for forget password case 
-            MessageBox.Show("Under development");
-        }
 
         private void lnklbl_SignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {

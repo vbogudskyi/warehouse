@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace ProductWarehouseManager
 {
-    public partial class UpdateProductManager : Form
+    public partial class BulkLoad : Form
     {
-        public UpdateProductManager()
+        public BulkLoad()
         {
             InitializeComponent();
-        }
-
-        private void UpdateProductManager_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -42,6 +42,8 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btn_Back = new System.Windows.Forms.Button();
             this.btn_Search = new System.Windows.Forms.Button();
+            this.btn_Suspend = new System.Windows.Forms.Button();
+            this.btn_Delete = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbx_Type = new System.Windows.Forms.ComboBox();
             this.ckbx_ProdNumb = new System.Windows.Forms.CheckBox();
@@ -52,8 +54,6 @@
             this.ckbx_All = new System.Windows.Forms.CheckBox();
             this.txt_Search = new System.Windows.Forms.TextBox();
             this.ckbx_UserName = new System.Windows.Forms.CheckBox();
-            this.btn_Suspend = new System.Windows.Forms.Button();
-            this.btn_Delete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lstbx_SearchManager
@@ -159,6 +159,26 @@
             this.toolTip1.SetToolTip(this.btn_Search, "Save");
             this.btn_Search.UseVisualStyleBackColor = true;
             // 
+            // btn_Suspend
+            // 
+            this.btn_Suspend.Location = new System.Drawing.Point(327, 350);
+            this.btn_Suspend.Name = "btn_Suspend";
+            this.btn_Suspend.Size = new System.Drawing.Size(75, 24);
+            this.btn_Suspend.TabIndex = 87;
+            this.btn_Suspend.Text = "Suspend/Activate";
+            this.toolTip1.SetToolTip(this.btn_Suspend, "Save");
+            this.btn_Suspend.UseVisualStyleBackColor = true;
+            // 
+            // btn_Delete
+            // 
+            this.btn_Delete.Location = new System.Drawing.Point(408, 350);
+            this.btn_Delete.Name = "btn_Delete";
+            this.btn_Delete.Size = new System.Drawing.Size(75, 24);
+            this.btn_Delete.TabIndex = 88;
+            this.btn_Delete.Text = "Delete";
+            this.toolTip1.SetToolTip(this.btn_Delete, "Save");
+            this.btn_Delete.UseVisualStyleBackColor = true;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -255,26 +275,6 @@
             this.ckbx_UserName.Text = "UserName";
             this.ckbx_UserName.UseVisualStyleBackColor = true;
             // 
-            // btn_Suspend
-            // 
-            this.btn_Suspend.Location = new System.Drawing.Point(327, 350);
-            this.btn_Suspend.Name = "btn_Suspend";
-            this.btn_Suspend.Size = new System.Drawing.Size(75, 24);
-            this.btn_Suspend.TabIndex = 87;
-            this.btn_Suspend.Text = "Suspend/Activate";
-            this.toolTip1.SetToolTip(this.btn_Suspend, "Save");
-            this.btn_Suspend.UseVisualStyleBackColor = true;
-            // 
-            // btn_Delete
-            // 
-            this.btn_Delete.Location = new System.Drawing.Point(408, 350);
-            this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(75, 24);
-            this.btn_Delete.TabIndex = 88;
-            this.btn_Delete.Text = "Delete";
-            this.toolTip1.SetToolTip(this.btn_Delete, "Save");
-            this.btn_Delete.UseVisualStyleBackColor = true;
-            // 
             // UpdateProductManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -306,6 +306,7 @@
             this.Controls.Add(this.lstbx_SearchManager);
             this.Name = "UpdateProductManager";
             this.Text = "Search/Update ProductManager";
+            this.Load += new System.EventHandler(this.UpdateProductManager_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

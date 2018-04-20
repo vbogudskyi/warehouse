@@ -1,6 +1,6 @@
 ﻿namespace ProductWarehouseManager
 {
-    partial class s
+    partial class UserManager
     {
         /// <summary>
         /// Required designer variable.

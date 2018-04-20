@@ -18,11 +18,6 @@ namespace ProductWarehouseManager
             InitializeComponent();
         }
 
-        private void SignUp_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_SignUp_Click(object sender, EventArgs e)
         {
             if (txt_Password.Text != txt_Password2.Text || txt_Password.Text == "")
@@ -50,7 +45,8 @@ namespace ProductWarehouseManager
         {
             OpenFileDialog browse = new OpenFileDialog();
             browse.InitialDirectory = @"C:\";
-          //  browse = "*.rca"
+            browse.FileName = "*.rca";
+      
             
             if (browse.ShowDialog() == DialogResult.OK)
             {
@@ -60,7 +56,7 @@ namespace ProductWarehouseManager
 
         }
 
-        private void label9_Click(object sender, EventArgs e)
+        private void SignUp_Load(object sender, EventArgs e)
         {
 
         }
