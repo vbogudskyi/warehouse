@@ -90,7 +90,7 @@
             // chkbx_Trust
             // 
             this.chkbx_Trust.AutoSize = true;
-            this.chkbx_Trust.Location = new System.Drawing.Point(388, 247);
+            this.chkbx_Trust.Location = new System.Drawing.Point(385, 247);
             this.chkbx_Trust.Name = "chkbx_Trust";
             this.chkbx_Trust.Size = new System.Drawing.Size(79, 17);
             this.chkbx_Trust.TabIndex = 18;
@@ -101,7 +101,7 @@
             // btn_SignIn
             // 
             this.btn_SignIn.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SignIn.Location = new System.Drawing.Point(388, 196);
+            this.btn_SignIn.Location = new System.Drawing.Point(385, 196);
             this.btn_SignIn.Name = "btn_SignIn";
             this.btn_SignIn.Size = new System.Drawing.Size(75, 28);
             this.btn_SignIn.TabIndex = 17;
@@ -144,9 +144,9 @@
             this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(385, 98);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 16);
+            this.label2.Size = new System.Drawing.Size(53, 16);
             this.label2.TabIndex = 13;
-            this.label2.Text = "Login: ";
+            this.label2.Text = "E-mail: ";
             // 
             // label1
             // 

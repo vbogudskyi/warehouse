@@ -19,7 +19,12 @@ namespace ProductWarehouseManager
 
         private void UpdateProductManager_Load(object sender, EventArgs e)
         {
+            ckbx_All.Checked = true;
+        }
 
+        private void btn_Back_Click(object sender, EventArgs e)
+        {
+            UpdateProductManager.ActiveForm.Close();
         }
     }
 }

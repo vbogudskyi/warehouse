@@ -103,6 +103,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validation\EmailValidator.cs" />
+    <Compile Include="Validation\IValidator.cs" />
+    <Compile Include="Validation\PhoneValidator.cs" />
+    <Compile Include="Validation\ValidatorContext.cs" />
     <EmbeddedResource Include="AddProductManager.resx">
       <DependentUpon>AddProductManager.cs</DependentUpon>
     </EmbeddedResource>

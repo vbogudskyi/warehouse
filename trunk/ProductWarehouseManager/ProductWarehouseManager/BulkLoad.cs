@@ -16,5 +16,10 @@ namespace ProductWarehouseManager
         {
             InitializeComponent();
         }
+
+        private void btn_Back_Click(object sender, EventArgs e)
+        {
+            BulkLoad.ActiveForm.Close();
+        }
     }
 }

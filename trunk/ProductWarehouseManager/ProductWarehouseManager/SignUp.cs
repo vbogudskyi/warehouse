@@ -1,4 +1,5 @@
 ﻿using ProductWarehouseManager.LogInSignUp;
+using ProductWarehouseManager.Validation;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,25 +21,38 @@ namespace ProductWarehouseManager
 
         private void btn_SignUp_Click(object sender, EventArgs e)
         {
-            if (txt_Password.Text != txt_Password2.Text || txt_Password.Text == "")
+            ValidatorContext validate = new ValidatorContext();
+          //  txt_UserId.Text = validate.SetValidation(new EmailValidator());
+
+            if  (validate.SetValidation(new EmailValidator()))
             {
-                MessageBox.Show("Please make sure the password 2 is same as Pasword 1");
-                txt_Password.Text = "";
-                txt_Password2.Text = "";
+                if (txt_Password.Text != txt_Password2.Text || txt_Password.Text == "")
+                {
+                    MessageBox.Show("Please make sure the password 2 is same as Pasword 1");
+                    txt_Password.Text = "";
+                    txt_Password2.Text = "";
+
+                }
+                else
+                {
+                    SignUpClass signUp = new SignUpClass();
+                    signUp.InsertData(txt_UserId.Text, txt_Password.Text, txt_FirstName.Text, txt_LastName.Text, txt_RSA.Text);
+
+                    txt_UserId.Text = "";
+                    txt_Password.Text = "";
+                    txt_Password2.Text = "";
+                    txt_FirstName.Text = "";
+                    txt_LastName.Text = "";
+                    txt_RSA.Text = "";
+                    txt_Phone.Text = "";
+                }
 
             }
             else
             {
-               SignUpClass signUp = new SignUpClass();
-               signUp.InsertData(txt_UserId.Text, txt_Password.Text, txt_FirstName.Text, txt_LastName.Text, txt_RSA.Text);
-        
-             txt_UserId.Text = "";
-             txt_Password.Text = "";
-             txt_Password2.Text = "";
-             txt_FirstName.Text = "";
-             txt_LastName.Text = "";
-             txt_RSA.Text = "";
+                MessageBox.Show("Please enter a valid e-mail!");
             }
+           
         }
 
         private void btn_Browse_Click(object sender, EventArgs e)
@@ -59,6 +73,11 @@ namespace ProductWarehouseManager
         private void SignUp_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_Back_Click(object sender, EventArgs e)
+        {
+            SignUp.ActiveForm.Close();
         }
     }
 }

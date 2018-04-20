@@ -37,12 +37,16 @@ namespace ProductWarehouseManager
                 MessageBox.Show("You are logged in successfully");
                 homePage = new HomePage();
                 homePage.Show();
+                Hide();
             }
             else
             {
                 //show default login error message 
                 MessageBox.Show("Login Error!");
             }
+
+            user = "";
+            pass = "";
         }
 
 

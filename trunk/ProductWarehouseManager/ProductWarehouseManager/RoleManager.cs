@@ -21,5 +21,10 @@ namespace ProductWarehouseManager
         {
 
         }
+
+        private void btn_Back_Click(object sender, EventArgs e)
+        {
+            RoleManager.ActiveForm.Close();
+        }
     }
 }

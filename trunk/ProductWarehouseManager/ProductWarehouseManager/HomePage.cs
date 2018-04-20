@@ -58,5 +58,18 @@ namespace ProductWarehouseManager
                 load.Show();
             }
         }
+
+        private void HomePage_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            // Application.Exit();
+            LogIn logIn = new LogIn();
+            logIn.Show();
+            Close();
+        }
     }
 }

@@ -33,13 +33,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_Name = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_BulkLoad = new System.Windows.Forms.Button();
             this.btn_Update = new System.Windows.Forms.Button();
             this.btn_Add = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btn_RoleManage = new System.Windows.Forms.Button();
             this.btn_UserManage = new System.Windows.Forms.Button();
             this.btn_MyAcc = new System.Windows.Forms.Button();
-            this.btn_RoleManage = new System.Windows.Forms.Button();
-            this.btn_BulkLoad = new System.Windows.Forms.Button();
+            this.btn_Exit = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -76,6 +77,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Product";
             // 
+            // btn_BulkLoad
+            // 
+            this.btn_BulkLoad.AutoSize = true;
+            this.btn_BulkLoad.Location = new System.Drawing.Point(6, 135);
+            this.btn_BulkLoad.Name = "btn_BulkLoad";
+            this.btn_BulkLoad.Size = new System.Drawing.Size(197, 29);
+            this.btn_BulkLoad.TabIndex = 2;
+            this.btn_BulkLoad.Text = "Bulk Load";
+            this.btn_BulkLoad.UseVisualStyleBackColor = true;
+            this.btn_BulkLoad.Click += new System.EventHandler(this.btn_BulkLoad_Click);
+            // 
             // btn_Update
             // 
             this.btn_Update.AutoSize = true;
@@ -111,6 +123,17 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "User";
             // 
+            // btn_RoleManage
+            // 
+            this.btn_RoleManage.AutoSize = true;
+            this.btn_RoleManage.Location = new System.Drawing.Point(6, 138);
+            this.btn_RoleManage.Name = "btn_RoleManage";
+            this.btn_RoleManage.Size = new System.Drawing.Size(178, 29);
+            this.btn_RoleManage.TabIndex = 2;
+            this.btn_RoleManage.Text = "Role Management";
+            this.btn_RoleManage.UseVisualStyleBackColor = true;
+            this.btn_RoleManage.Click += new System.EventHandler(this.btn_RoleManage_Click);
+            // 
             // btn_UserManage
             // 
             this.btn_UserManage.AutoSize = true;
@@ -133,39 +156,29 @@
             this.btn_MyAcc.UseVisualStyleBackColor = true;
             this.btn_MyAcc.Click += new System.EventHandler(this.btn_MyAcc_Click);
             // 
-            // btn_RoleManage
+            // btn_Exit
             // 
-            this.btn_RoleManage.AutoSize = true;
-            this.btn_RoleManage.Location = new System.Drawing.Point(6, 138);
-            this.btn_RoleManage.Name = "btn_RoleManage";
-            this.btn_RoleManage.Size = new System.Drawing.Size(178, 29);
-            this.btn_RoleManage.TabIndex = 2;
-            this.btn_RoleManage.Text = "Role Management";
-            this.btn_RoleManage.UseVisualStyleBackColor = true;
-            this.btn_RoleManage.Click += new System.EventHandler(this.btn_RoleManage_Click);
-            // 
-            // btn_BulkLoad
-            // 
-            this.btn_BulkLoad.AutoSize = true;
-            this.btn_BulkLoad.Location = new System.Drawing.Point(6, 135);
-            this.btn_BulkLoad.Name = "btn_BulkLoad";
-            this.btn_BulkLoad.Size = new System.Drawing.Size(197, 29);
-            this.btn_BulkLoad.TabIndex = 2;
-            this.btn_BulkLoad.Text = "Bulk Load";
-            this.btn_BulkLoad.UseVisualStyleBackColor = true;
-            this.btn_BulkLoad.Click += new System.EventHandler(this.btn_BulkLoad_Click);
+            this.btn_Exit.Location = new System.Drawing.Point(574, 395);
+            this.btn_Exit.Name = "btn_Exit";
+            this.btn_Exit.Size = new System.Drawing.Size(75, 23);
+            this.btn_Exit.TabIndex = 4;
+            this.btn_Exit.Text = "Exit";
+            this.btn_Exit.UseVisualStyleBackColor = true;
+            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(664, 456);
+            this.Controls.Add(this.btn_Exit);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lbl_Name);
             this.Controls.Add(this.label1);
             this.Name = "HomePage";
             this.Text = "HomePage";
+            this.Load += new System.EventHandler(this.HomePage_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -188,5 +201,6 @@
         private System.Windows.Forms.Button btn_MyAcc;
         private System.Windows.Forms.Button btn_RoleManage;
         private System.Windows.Forms.Button btn_BulkLoad;
+        private System.Windows.Forms.Button btn_Exit;
     }
 }
