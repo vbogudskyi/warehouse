@@ -57,6 +57,8 @@
     <Compile Include="BulkLoad.Designer.cs">
       <DependentUpon>BulkLoad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\Invoice.cs" />
+    <Compile Include="Classes\Product.cs" />
     <Compile Include="HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +72,12 @@
     </Compile>
     <Compile Include="MyAccount.Designer.cs">
       <DependentUpon>MyAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetriveProductInvoce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetriveProductInvoce.Designer.cs">
+      <DependentUpon>RetriveProductInvoce.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdateProductManager.cs">
       <SubType>Form</SubType>
@@ -118,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyAccount.resx">
       <DependentUpon>MyAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetriveProductInvoce.resx">
+      <DependentUpon>RetriveProductInvoce.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateProductManager.resx">
       <DependentUpon>UpdateProductManager.cs</DependentUpon>
