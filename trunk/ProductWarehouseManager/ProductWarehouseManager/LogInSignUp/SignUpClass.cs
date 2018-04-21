@@ -21,6 +21,11 @@ namespace ProductWarehouseManager.LogInSignUp
             con = new SqlConnection(@"Data Source=NICOLAE-PC\MYSQLSERVER;Initial Catalog=ProductWarehouse;Integrated Security=True");
         }
 
+        public void GetUSer()
+        {
+
+        }
+
         public void InsertData(String login, String psw, String fname, String lname, String rsa)
         {
             try
