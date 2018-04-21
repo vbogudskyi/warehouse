@@ -12,8 +12,7 @@ namespace ComponentsIntergrationMiddleware.api.master.model
         private String documentId;
         private String name;
         private String prId;
-<<<<<<< HEAD
-=======
+        private String description;
         private int quantity;
 
         public int ID
@@ -40,11 +39,16 @@ namespace ComponentsIntergrationMiddleware.api.master.model
             set { prId = value; }
         }
 
+        public String Description
+        {
+            get { return description; }
+            set { description = value; }
+        }
+
         public int Quantity
         {
             get { return quantity; }
             set { quantity = value; }
         }
->>>>>>> 68d5ff30558b00241ab151cd83a07d666f5d104b
     }
 }
