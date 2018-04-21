@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -58,14 +59,16 @@ namespace ProductWarehouseManager
         private void btn_Browse_Click(object sender, EventArgs e)
         {
             OpenFileDialog browse = new OpenFileDialog();
-            browse.InitialDirectory = @"C:\";
-            browse.FileName = "*.rca";
-      
-            
+            browse.InitialDirectory = @"C:\Users\Nicolae\Documents\GitHub\warehouse\docs\vbohudskyi\rsa";
+            browse.FileName = "*.rsa";
+            browse.FilterIndex = 1;
+            browse.Multiselect = false;
+
+
             if (browse.ShowDialog() == DialogResult.OK)
             {
-                //need to figure out how to select the RSA from the list
-                MessageBox.Show("Need to finish the logic");
+                string fileName = browse.FileName;
+                txt_RSA.Text = Path.GetFileNameWithoutExtension(fileName);
             }
 
         }

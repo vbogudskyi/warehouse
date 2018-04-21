@@ -30,7 +30,7 @@ namespace ComponentsIntergrationMiddleware.api.master.dal
 
         public void deleteProductType(int tid)
         {
-            rawQuery(String.Format("DELETE FROM ProductType WHERE TID={0}", tid);
+            rawQuery(String.Format("DELETE FROM ProductType WHERE TID={0}", tid));
         }
 
         protected override ProductType getFromReader(SqlDataReader reader)
