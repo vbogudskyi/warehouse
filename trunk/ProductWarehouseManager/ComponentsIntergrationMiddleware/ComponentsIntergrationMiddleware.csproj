@@ -42,8 +42,13 @@
   <ItemGroup>
     <Compile Include="api\master\dal\CompanyDAL.cs" />
     <Compile Include="api\master\dal\GenericDAL.cs" />
+    <Compile Include="api\master\dal\InventoryDocumentationDAL.cs" />
     <Compile Include="api\master\dal\PermissionsDAL.cs" />
+    <Compile Include="api\master\dal\ProductDocumentDAL.cs" />
+    <Compile Include="api\master\dal\ProductInventoryDAL.cs" />
+    <Compile Include="api\master\dal\ProductTypeDAL.cs" />
     <Compile Include="api\master\dal\RoleDAL.cs" />
+    <Compile Include="api\master\dal\RolePermissionsDAL.cs" />
     <Compile Include="api\master\dal\SignInDAL.cs" />
     <Compile Include="api\master\dal\UserDAL.cs" />
     <Compile Include="api\master\helper\SqlHelper.cs" />

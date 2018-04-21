@@ -14,15 +14,15 @@ namespace ComponentsIntergrationMiddleware.api.master.dal
         public UserDAL(SqlHelper helper) : base(helper){}
 
         public void createUser(String login, String password,
-                               String firstName, String lastName,
+                               String firstName, String lastName, String telephone,
                                String rsa, bool active = true,
                                String role = null, String company = null
                               )
         {
-            rawQuery(String.Format("INSERT INTO Users (LOGIN, PSW, FNAME, LNAME, RSA, ACTIVE, RID, CID) VALUES({0}, {1}, {2}, {3}, {4}, " +
-                "{5}, {6}, {7}, {8})", login, password, firstName, lastName, rsa, active ? 1 : 0,
-                String.Format("(SELECT RID FROM ROLE WHERE NAME={0}) ", role ?? "Admin"),
-                String.Format("(SELECT CID FROM COMPANY WHERE NAME={0}) ", company ?? "Common Company")
+            rawQuery(String.Format("INSERT INTO Users (LOGIN, PSW, FNAME, LNAME, RSA, ACTIVE, RID, CID, TELEPHONE) VALUES({0}, {1}, {2}, {3}, {4}, " +
+                "{5}, {6}, {7}, {8}, {9})", login, password, firstName, lastName, rsa, active ? 1 : 0,
+                String.Format("(SELECT RID FROM ROLE WHERE NAME={0}) ", role ?? "Employee"),
+                String.Format("(SELECT CID FROM COMPANY WHERE NAME={0}) ", company ?? "Common Company"), telephone
                 ));
         }
 

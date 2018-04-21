@@ -10,10 +10,10 @@ namespace ComponentsIntergrationMiddleware.api.master.model
     {
         private int id;
         private String prId;
-        private String description;
         private bool active;
         private int tid;
         private int totalQuantity;
+        private String name;
 
         public int ID
         {
@@ -27,28 +27,28 @@ namespace ComponentsIntergrationMiddleware.api.master.model
             set { prId = value; }
         }
 
-        public String Description
-        {
-            get { return description; }
-            set { description = value; }
-        }
-
         public bool Active
         {
             get { return active; }
             set { active = value; }
         }
 
-        private int TID
+        public int TID
         {
             get { return tid; }
             set { tid = value; }
         }
 
-        private int TotalQuantity
+        public int TotalQuantity
         {
             get { return totalQuantity; }
             set { totalQuantity = value; }
+        }
+
+        public String Name
+        {
+            get { return name; }
+            set { name = value; }
         }
 
     }
