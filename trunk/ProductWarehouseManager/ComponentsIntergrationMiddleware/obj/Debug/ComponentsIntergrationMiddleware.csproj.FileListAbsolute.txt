@@ -1,1 +1,0 @@
-C:\Users\Nicolae\Documents\GitHub\warehouse\trunk\ProductWarehouseManager\ComponentsIntergrationMiddleware\obj\Debug\ComponentsIntergrationMiddleware.csproj.CoreCompileInputs.cache
