@@ -116,7 +116,7 @@
             this.groupBox2.Controls.Add(this.btn_UserManage);
             this.groupBox2.Controls.Add(this.btn_MyAcc);
             this.groupBox2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(302, 97);
+            this.groupBox2.Location = new System.Drawing.Point(314, 97);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(200, 189);
             this.groupBox2.TabIndex = 3;
