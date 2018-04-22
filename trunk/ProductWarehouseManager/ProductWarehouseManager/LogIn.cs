@@ -1,4 +1,5 @@
-﻿using ProductWarehouseManager.LogInSignUp;
+﻿using ProductWarehouseManager.Classes;
+using ProductWarehouseManager.LogInSignUp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,7 @@ namespace ProductWarehouseManager
         //Enter code here for your version of username and userpassword 
         LogInClass login;
         HomePage homePage;
+        ReadRSA readRsa;
         public LogIn()
         {
             InitializeComponent();
@@ -37,16 +39,11 @@ namespace ProductWarehouseManager
             //check if eligible to be logged in 
             if (login.IsLoggedIn(user, pass))
             {
-              //  MessageBox.Show("You are logged in successfully");
+
                 homePage = new HomePage();
                 homePage.Show();
                 Hide();
             }
-            //else
-            //{
-            //    //show default login error message 
-            //    MessageBox.Show("Login Error!");
-            //}
 
             user = "";
             pass = "";
@@ -55,8 +52,7 @@ namespace ProductWarehouseManager
 
         private void lnklbl_SignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            //Enter your code for registration form of your choice 
-            // MessageBox.Show("Under development");
+
             SignUp signUp = new SignUp();
             signUp.Show();
         }
@@ -74,6 +70,10 @@ namespace ProductWarehouseManager
             {
                 string fileName = browse.FileName;
                 lb_RSA.Text = Path.GetFileNameWithoutExtension(fileName);
+                readRsa = new ReadRSA(fileName);
+                readRsa.readRsa();
+                MessageBox.Show(readRsa.readRsa());
+
             }
         }
     }

@@ -115,6 +115,9 @@ namespace ProductWarehouseManager
             Close();
         }
 
-
+        private void btn_Upload_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Need to add the logic");
+        }
     }
 }
