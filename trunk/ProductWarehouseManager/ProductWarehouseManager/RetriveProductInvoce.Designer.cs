@@ -42,6 +42,7 @@
             this.grdvw_AddProduct = new System.Windows.Forms.DataGridView();
             this.btn_Upload = new System.Windows.Forms.Button();
             this.btn_Back = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grdvw_AddProduct)).BeginInit();
             this.SuspendLayout();
             // 
@@ -164,11 +165,21 @@
             this.btn_Back.UseVisualStyleBackColor = true;
             this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(392, 86);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 110;
+            this.button1.Text = "Add";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // RetriveProductInvoce
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(575, 486);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_Upload);
             this.Controls.Add(this.btn_Back);
             this.Controls.Add(this.grdvw_AddProduct);
@@ -184,7 +195,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "RetriveProductInvoce";
-            this.Text = "RetriveProductInvoce";
+            this.Text = "Create Invoice";
             this.Load += new System.EventHandler(this.RetriveProductInvoce_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdvw_AddProduct)).EndInit();
             this.ResumeLayout(false);
@@ -208,5 +219,6 @@
         private System.Windows.Forms.DataGridView grdvw_AddProduct;
         private System.Windows.Forms.Button btn_Upload;
         private System.Windows.Forms.Button btn_Back;
+        private System.Windows.Forms.Button button1;
     }
 }

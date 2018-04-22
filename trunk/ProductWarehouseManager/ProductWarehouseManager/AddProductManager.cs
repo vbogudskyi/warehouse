@@ -14,6 +14,7 @@ namespace ProductWarehouseManager
     public partial class AddProductManager : Form
     {
         DataTable dt;
+        DataRow dr;
         List<string> upload;
         Product product;
         public AddProductManager()
@@ -49,7 +50,7 @@ namespace ProductWarehouseManager
             DateTime date = DateTime.Today;
             string data = date.ToString();
             string data1 = cmbx_compName.Text;
-            string data2 = cmbx_DocName.Text;
+            string data2 = txt_DocName.Text;
             string data3 = txt_Name.Text;
             string data4 = cmbx_ProdType.Text;
             string data5 = txt_Quantity.Text;
@@ -57,14 +58,15 @@ namespace ProductWarehouseManager
 
             try
             {
-                DataRow dr = dt.NewRow();
+               // dr = dt.NewRow();
                
                 product = new Product(data, data1, data2, data3, data4, int.Parse(data5), data6);
                 dt.Rows.Add(data, data1, data2, data3, data4, data5, data6);
-                MessageBox.Show(product.ToString());
+              //  MessageBox.Show(product.ToString());
          
                 upload.Add(product.ToString());
-                
+               
+
             }
             catch(Exception ex)
             {
@@ -74,5 +76,45 @@ namespace ProductWarehouseManager
             
 
         }
+
+        private void btn_Delete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                foreach (DataGridViewRow item in this.grdvw_AddProduct.SelectedRows)
+                {
+
+                    grdvw_AddProduct.Rows.RemoveAt(item.Index);
+                }
+
+                //nned to figure oyt why is out of index bounds
+                string data = grdvw_AddProduct.SelectedRows[0].Cells[0].Value.ToString();
+                string data1 = grdvw_AddProduct.SelectedRows[0].Cells[1].Value.ToString();
+                string data2 = grdvw_AddProduct.SelectedRows[0].Cells[2].Value.ToString();
+                string data3 = grdvw_AddProduct.SelectedRows[0].Cells[3].Value.ToString();
+                string data4 = grdvw_AddProduct.SelectedRows[0].Cells[4].Value.ToString();
+                string data5 = grdvw_AddProduct.SelectedRows[0].Cells[5].Value.ToString();
+                string data6 = grdvw_AddProduct.SelectedRows[0].Cells[6].Value.ToString();
+                product = new Product(data, data1, data2, data3, data4, int.Parse(data5), data6);
+
+                upload.Remove(product.ToString());
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+        }
+
+
+        private void lnklbl_SearchUpdate_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            UpdateProductManager update = new UpdateProductManager();
+            update.Show();
+            Close();
+        }
+
+
     }
 }

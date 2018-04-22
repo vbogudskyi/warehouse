@@ -15,7 +15,7 @@ namespace ProductWarehouseManager
     public partial class LogIn : Form
     {
         //Enter code here for your version of username and userpassword 
-        LogInClass login = new LogInClass("admin", "1234");
+        LogInClass login;
         HomePage homePage;
         public LogIn()
         {
@@ -32,19 +32,21 @@ namespace ProductWarehouseManager
             //define local variables from the user inputs 
             string user = txt_UserId.Text;
             string pass = txt_Password.Text;
+
+            login = new LogInClass("admin", "1234");
             //check if eligible to be logged in 
             if (login.IsLoggedIn(user, pass))
             {
-                MessageBox.Show("You are logged in successfully");
+              //  MessageBox.Show("You are logged in successfully");
                 homePage = new HomePage();
                 homePage.Show();
                 Hide();
             }
-            else
-            {
-                //show default login error message 
-                MessageBox.Show("Login Error!");
-            }
+            //else
+            //{
+            //    //show default login error message 
+            //    MessageBox.Show("Login Error!");
+            //}
 
             user = "";
             pass = "";

@@ -48,6 +48,8 @@
             this.btn_Save = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txt_RSA = new System.Windows.Forms.TextBox();
+            this.txt_Phone = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txt_Password2
@@ -152,7 +154,7 @@
             this.cmbx_Company.Enabled = false;
             this.cmbx_Company.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbx_Company.FormattingEnabled = true;
-            this.cmbx_Company.Location = new System.Drawing.Point(137, 365);
+            this.cmbx_Company.Location = new System.Drawing.Point(137, 406);
             this.cmbx_Company.Name = "cmbx_Company";
             this.cmbx_Company.Size = new System.Drawing.Size(205, 24);
             this.cmbx_Company.TabIndex = 59;
@@ -161,7 +163,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(12, 365);
+            this.label9.Location = new System.Drawing.Point(12, 406);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(67, 16);
             this.label9.TabIndex = 58;
@@ -173,7 +175,7 @@
             this.cmbx_Role.Enabled = false;
             this.cmbx_Role.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbx_Role.FormattingEnabled = true;
-            this.cmbx_Role.Location = new System.Drawing.Point(137, 325);
+            this.cmbx_Role.Location = new System.Drawing.Point(137, 366);
             this.cmbx_Role.Name = "cmbx_Role";
             this.cmbx_Role.Size = new System.Drawing.Size(205, 24);
             this.cmbx_Role.TabIndex = 57;
@@ -182,7 +184,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(12, 325);
+            this.label7.Location = new System.Drawing.Point(12, 366);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(45, 16);
             this.label7.TabIndex = 56;
@@ -191,18 +193,18 @@
             // btn_Edit
             // 
             this.btn_Edit.AutoSize = true;
-            this.btn_Edit.Location = new System.Drawing.Point(12, 409);
+            this.btn_Edit.Location = new System.Drawing.Point(12, 450);
             this.btn_Edit.Name = "btn_Edit";
             this.btn_Edit.Size = new System.Drawing.Size(90, 23);
             this.btn_Edit.TabIndex = 60;
-            this.btn_Edit.Text = "Edit Inforamtion";
+            this.btn_Edit.Text = "Update";
             this.btn_Edit.UseVisualStyleBackColor = true;
             this.btn_Edit.Click += new System.EventHandler(this.btn_Edit_Click);
             // 
             // btn_Back
             // 
             this.btn_Back.AutoSize = true;
-            this.btn_Back.Location = new System.Drawing.Point(252, 409);
+            this.btn_Back.Location = new System.Drawing.Point(252, 450);
             this.btn_Back.Name = "btn_Back";
             this.btn_Back.Size = new System.Drawing.Size(90, 23);
             this.btn_Back.TabIndex = 61;
@@ -214,16 +216,16 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(115, 28);
+            this.label1.Location = new System.Drawing.Point(11, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(186, 19);
+            this.label1.Size = new System.Drawing.Size(102, 19);
             this.label1.TabIndex = 62;
-            this.label1.Text = "Welcom to My Account!";
+            this.label1.Text = "My Account!";
             // 
             // btn_Save
             // 
             this.btn_Save.AutoSize = true;
-            this.btn_Save.Location = new System.Drawing.Point(137, 409);
+            this.btn_Save.Location = new System.Drawing.Point(137, 450);
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(90, 23);
             this.btn_Save.TabIndex = 63;
@@ -236,7 +238,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 285);
+            this.label6.Location = new System.Drawing.Point(12, 326);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(39, 16);
             this.label6.TabIndex = 64;
@@ -246,17 +248,39 @@
             // 
             this.txt_RSA.Enabled = false;
             this.txt_RSA.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_RSA.Location = new System.Drawing.Point(137, 285);
+            this.txt_RSA.Location = new System.Drawing.Point(137, 326);
             this.txt_RSA.Name = "txt_RSA";
             this.txt_RSA.Size = new System.Drawing.Size(205, 22);
             this.txt_RSA.TabIndex = 65;
             this.txt_RSA.UseSystemPasswordChar = true;
             // 
+            // txt_Phone
+            // 
+            this.txt_Phone.Enabled = false;
+            this.txt_Phone.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Phone.Location = new System.Drawing.Point(137, 287);
+            this.txt_Phone.Name = "txt_Phone";
+            this.txt_Phone.Size = new System.Drawing.Size(205, 22);
+            this.txt_Phone.TabIndex = 67;
+            this.txt_Phone.UseSystemPasswordChar = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(12, 287);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(53, 16);
+            this.label10.TabIndex = 66;
+            this.label10.Text = "Phone: ";
+            // 
             // MyAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(449, 458);
+            this.ClientSize = new System.Drawing.Size(449, 495);
+            this.Controls.Add(this.txt_Phone);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.txt_RSA);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btn_Save);
@@ -307,5 +331,7 @@
         private System.Windows.Forms.Button btn_Save;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txt_RSA;
+        private System.Windows.Forms.TextBox txt_Phone;
+        private System.Windows.Forms.Label label10;
     }
 }

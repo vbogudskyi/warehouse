@@ -9,18 +9,12 @@ namespace ProductWarehouseManager.Validation
 {
     class EmailValidator : IValidator
     {
-        Regex pattern;
-        public Boolean validation(string data)
+         
+        public bool validation(string data)
         {
-            pattern = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
-            if (pattern.IsMatch(data))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            Regex pattern = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+
+            return pattern.IsMatch(data);
         }
 
 

@@ -13,12 +13,14 @@ namespace ProductWarehouseManager.LogInSignUp
         //decalre properties 
         public string Username { get; set; }
         public string Userpassword { get; set; }
+       // public string rsa { get; set; }
 
         //intialise  
         public LogInClass(string user, string pass)
         {
             this.Username = user;
             this.Userpassword = pass;
+           // this.rsa = rsa;
         }
         //validate string 
         private bool StringValidator(string input)

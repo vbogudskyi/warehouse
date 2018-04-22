@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btn_Save = new System.Windows.Forms.Button();
-            this.ckbx_reports = new System.Windows.Forms.CheckBox();
             this.ckbx_Select = new System.Windows.Forms.CheckBox();
             this.ckbx_Insert = new System.Windows.Forms.CheckBox();
             this.ckbx_Update = new System.Windows.Forms.CheckBox();
@@ -40,12 +39,12 @@
             this.clbx_Delete = new System.Windows.Forms.CheckBox();
             this.ckbx_User = new System.Windows.Forms.CheckBox();
             this.ckbx_BulkLoad = new System.Windows.Forms.CheckBox();
-            this.btn_DispalyAll = new System.Windows.Forms.Button();
             this.btn_Search = new System.Windows.Forms.Button();
             this.lstbx_RoleManager = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_Serch = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.ckbx_reports = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,17 +57,6 @@
             this.btn_Save.Text = "Save";
             this.toolTip1.SetToolTip(this.btn_Save, "Save");
             this.btn_Save.UseVisualStyleBackColor = true;
-            // 
-            // ckbx_reports
-            // 
-            this.ckbx_reports.AutoSize = true;
-            this.ckbx_reports.Location = new System.Drawing.Point(6, 142);
-            this.ckbx_reports.Name = "ckbx_reports";
-            this.ckbx_reports.Size = new System.Drawing.Size(97, 17);
-            this.ckbx_reports.TabIndex = 4;
-            this.ckbx_reports.Text = "Create Reports";
-            this.toolTip1.SetToolTip(this.ckbx_reports, "Grant Create Reports");
-            this.ckbx_reports.UseVisualStyleBackColor = true;
             // 
             // ckbx_Select
             // 
@@ -152,25 +140,15 @@
             this.ckbx_BulkLoad.AutoSize = true;
             this.ckbx_BulkLoad.Location = new System.Drawing.Point(6, 162);
             this.ckbx_BulkLoad.Name = "ckbx_BulkLoad";
-            this.ckbx_BulkLoad.Size = new System.Drawing.Size(88, 17);
+            this.ckbx_BulkLoad.Size = new System.Drawing.Size(91, 17);
             this.ckbx_BulkLoad.TabIndex = 7;
-            this.ckbx_BulkLoad.Text = "Bulk Loading";
+            this.ckbx_BulkLoad.Text = "Data Transfer";
             this.toolTip1.SetToolTip(this.ckbx_BulkLoad, "Grant Update");
             this.ckbx_BulkLoad.UseVisualStyleBackColor = true;
             // 
-            // btn_DispalyAll
-            // 
-            this.btn_DispalyAll.Location = new System.Drawing.Point(389, 22);
-            this.btn_DispalyAll.Name = "btn_DispalyAll";
-            this.btn_DispalyAll.Size = new System.Drawing.Size(75, 24);
-            this.btn_DispalyAll.TabIndex = 77;
-            this.btn_DispalyAll.Text = "Dispaly All";
-            this.toolTip1.SetToolTip(this.btn_DispalyAll, "Display All Users");
-            this.btn_DispalyAll.UseVisualStyleBackColor = true;
-            // 
             // btn_Search
             // 
-            this.btn_Search.Location = new System.Drawing.Point(258, 22);
+            this.btn_Search.Location = new System.Drawing.Point(137, 48);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Size = new System.Drawing.Size(75, 24);
             this.btn_Search.TabIndex = 76;
@@ -215,16 +193,27 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(9, 22);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 13);
+            this.label9.Size = new System.Drawing.Size(29, 13);
             this.label9.TabIndex = 74;
-            this.label9.Text = "E-mail";
+            this.label9.Text = "Role";
+            // 
+            // ckbx_reports
+            // 
+            this.ckbx_reports.AutoSize = true;
+            this.ckbx_reports.Enabled = false;
+            this.ckbx_reports.Location = new System.Drawing.Point(6, 142);
+            this.ckbx_reports.Name = "ckbx_reports";
+            this.ckbx_reports.Size = new System.Drawing.Size(97, 17);
+            this.ckbx_reports.TabIndex = 4;
+            this.ckbx_reports.Text = "Create Reports";
+            this.toolTip1.SetToolTip(this.ckbx_reports, "Grant Create Reports");
+            this.ckbx_reports.UseVisualStyleBackColor = true;
             // 
             // RoleManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(493, 429);
-            this.Controls.Add(this.btn_DispalyAll);
             this.Controls.Add(this.btn_Search);
             this.Controls.Add(this.txt_Serch);
             this.Controls.Add(this.label9);
@@ -248,7 +237,6 @@
         private System.Windows.Forms.ListBox lstbx_RoleManager;
         private System.Windows.Forms.Button btn_Save;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox ckbx_reports;
         private System.Windows.Forms.CheckBox ckbx_Select;
         private System.Windows.Forms.CheckBox ckbx_Insert;
         private System.Windows.Forms.CheckBox ckbx_Update;
@@ -257,9 +245,9 @@
         private System.Windows.Forms.CheckBox ckbx_BulkLoad;
         private System.Windows.Forms.CheckBox ckbx_User;
         private System.Windows.Forms.CheckBox clbx_Delete;
-        private System.Windows.Forms.Button btn_DispalyAll;
         private System.Windows.Forms.Button btn_Search;
         private System.Windows.Forms.TextBox txt_Serch;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.CheckBox ckbx_reports;
     }
 }

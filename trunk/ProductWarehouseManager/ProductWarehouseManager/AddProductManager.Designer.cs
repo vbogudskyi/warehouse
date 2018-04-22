@@ -44,10 +44,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cmbx_compName = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.cmbx_DocName = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.grdvw_AddProduct = new System.Windows.Forms.DataGridView();
             this.btn_Upload = new System.Windows.Forms.Button();
+            this.btn_Delete = new System.Windows.Forms.Button();
+            this.txt_DocName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.grdvw_AddProduct)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,6 +63,7 @@
             this.lnklbl_SearchUpdate.TabStop = true;
             this.lnklbl_SearchUpdate.Text = "Search/Update";
             this.toolTip1.SetToolTip(this.lnklbl_SearchUpdate, "Sign Up");
+            this.lnklbl_SearchUpdate.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnklbl_SearchUpdate_LinkClicked);
             // 
             // cmbx_ProdType
             // 
@@ -130,7 +132,7 @@
             // 
             // btn_Add
             // 
-            this.btn_Add.Location = new System.Drawing.Point(681, 96);
+            this.btn_Add.Location = new System.Drawing.Point(578, 96);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(75, 23);
             this.btn_Add.TabIndex = 85;
@@ -176,14 +178,6 @@
             this.label6.TabIndex = 89;
             this.label6.Text = "Company Name";
             // 
-            // cmbx_DocName
-            // 
-            this.cmbx_DocName.FormattingEnabled = true;
-            this.cmbx_DocName.Location = new System.Drawing.Point(118, 57);
-            this.cmbx_DocName.Name = "cmbx_DocName";
-            this.cmbx_DocName.Size = new System.Drawing.Size(125, 21);
-            this.cmbx_DocName.TabIndex = 92;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -211,14 +205,32 @@
             this.btn_Upload.Text = "Upload";
             this.btn_Upload.UseVisualStyleBackColor = true;
             // 
+            // btn_Delete
+            // 
+            this.btn_Delete.Location = new System.Drawing.Point(681, 96);
+            this.btn_Delete.Name = "btn_Delete";
+            this.btn_Delete.Size = new System.Drawing.Size(75, 23);
+            this.btn_Delete.TabIndex = 95;
+            this.btn_Delete.Text = "Delete";
+            this.btn_Delete.UseVisualStyleBackColor = true;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
+            // 
+            // txt_DocName
+            // 
+            this.txt_DocName.Location = new System.Drawing.Point(118, 54);
+            this.txt_DocName.Name = "txt_DocName";
+            this.txt_DocName.Size = new System.Drawing.Size(125, 20);
+            this.txt_DocName.TabIndex = 96;
+            // 
             // AddProductManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(767, 540);
+            this.Controls.Add(this.txt_DocName);
+            this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.btn_Upload);
             this.Controls.Add(this.grdvw_AddProduct);
-            this.Controls.Add(this.cmbx_DocName);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.cmbx_compName);
             this.Controls.Add(this.label6);
@@ -235,7 +247,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "AddProductManager";
-            this.Text = "Add Product";
+            this.Text = "Add Document";
             this.Load += new System.EventHandler(this.AddProductManager_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdvw_AddProduct)).EndInit();
             this.ResumeLayout(false);
@@ -260,9 +272,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbx_compName;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cmbx_DocName;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView grdvw_AddProduct;
         private System.Windows.Forms.Button btn_Upload;
+        private System.Windows.Forms.Button btn_Delete;
+        private System.Windows.Forms.TextBox txt_DocName;
     }
 }

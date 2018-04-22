@@ -15,6 +15,8 @@ namespace ProductWarehouseManager
 {
     public partial class SignUp : Form
     {
+      
+
         public SignUp()
         {
             InitializeComponent();
@@ -22,38 +24,49 @@ namespace ProductWarehouseManager
 
         private void btn_SignUp_Click(object sender, EventArgs e)
         {
-            ValidatorContext validate = new ValidatorContext();
-          //  txt_UserId.Text = validate.SetValidation(new EmailValidator());
+            
+           ValidatorContext validate = new ValidatorContext(new EmailValidator());
+            ValidatorContext phone = new ValidatorContext(new PhoneValidator());
+  
 
-            if  (validate.SetValidation(new EmailValidator()))
-            {
-                if (txt_Password.Text != txt_Password2.Text || txt_Password.Text == "")
+
+             if  ( validate.validation(txt_UserId.Text))
+              {
+                if (phone.validation(txt_Phone.Text))
                 {
-                    MessageBox.Show("Please make sure the password 2 is same as Pasword 1");
-                    txt_Password.Text = "";
-                    txt_Password2.Text = "";
+                    if (txt_Password.Text != txt_Password2.Text || txt_Password.Text == "")
+                    {
+                        MessageBox.Show("Please make sure the password 2 is same as Pasword 1");
+                        txt_Password.Text = "";
+                        txt_Password2.Text = "";
 
+                    }
+                    else
+                    {
+                        SignUpClass signUp = new SignUpClass();
+                        signUp.InsertData(txt_UserId.Text, txt_Password.Text, txt_FirstName.Text, txt_LastName.Text, txt_RSA.Text);
+
+                        txt_UserId.Text = "";
+                        txt_Password.Text = "";
+                        txt_Password2.Text = "";
+                        txt_FirstName.Text = "";
+                        txt_LastName.Text = "";
+                        txt_RSA.Text = "";
+                        txt_Phone.Text = "";
+                    }
                 }
                 else
                 {
-                    SignUpClass signUp = new SignUpClass();
-                    signUp.InsertData(txt_UserId.Text, txt_Password.Text, txt_FirstName.Text, txt_LastName.Text, txt_RSA.Text);
-
-                    txt_UserId.Text = "";
-                    txt_Password.Text = "";
-                    txt_Password2.Text = "";
-                    txt_FirstName.Text = "";
-                    txt_LastName.Text = "";
-                    txt_RSA.Text = "";
-                    txt_Phone.Text = "";
+                    MessageBox.Show("Please enter a valid phone!");
                 }
+              
 
             }
             else
             {
                 MessageBox.Show("Please enter a valid e-mail!");
             }
-           
+
         }
 
         private void btn_Browse_Click(object sender, EventArgs e)

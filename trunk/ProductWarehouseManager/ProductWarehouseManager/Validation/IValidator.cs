@@ -8,6 +8,6 @@ namespace ProductWarehouseManager.Validation
 {
     interface IValidator
     {
-        Boolean validation(String data);
+        bool validation(String data);
     }
 }
