@@ -42,8 +42,6 @@ INSERT INTO ROLE VALUES('Employee');
 
 EXEC sp_helpconstraint Users;
 
-ALTER TABLE Users
-DROP CONSTRAINT DF__Users__RID__5441852A; --Nicolae, enter your RID default constraint name here
 
 ALTER TABLE Users
 ADD CONSTRAINT df_role_id DEFAULT 2 FOR RID;
@@ -59,4 +57,7 @@ INSERT INTO Users(RID, LNAME, FNAME, RSA, LOGIN, PSW, ACTIVE, Telephone) VALUES(
   '111-222-3333'
 );
 
-SELECT * FROM Users;
+
+
+ALTER TABLE Users
+DROP CONSTRAINT DF__Users__RID__2E1BDC42; --Nicolae, enter your RID default constraint name here

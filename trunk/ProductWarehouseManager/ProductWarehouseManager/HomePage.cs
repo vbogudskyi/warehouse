@@ -49,14 +49,10 @@ namespace ProductWarehouseManager
 
         private void btn_BulkLoad_Click(object sender, EventArgs e)
         {
-            OpenFileDialog browse = new OpenFileDialog();
-            browse.InitialDirectory = @"C:\";
-            browse.FileName = "*.xls";
-            if (browse.ShowDialog() == DialogResult.OK)
-            {
-                BulkLoad load = new BulkLoad();
-                load.Show();
-            }
+
+            BulkLoad load = new BulkLoad();
+            load.Show();
+
         }
 
         private void HomePage_Load(object sender, EventArgs e)
@@ -70,6 +66,14 @@ namespace ProductWarehouseManager
             LogIn logIn = new LogIn();
             logIn.Show();
             Close();
+        }
+
+        private void btn_RetrieveProduct_Click(object sender, EventArgs e)
+        {
+            RetriveProductInvoce invoice = new RetriveProductInvoce();
+            invoice.Show();
+            
+
         }
     }
 }

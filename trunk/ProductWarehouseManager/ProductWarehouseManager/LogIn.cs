@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -56,6 +57,22 @@ namespace ProductWarehouseManager
             // MessageBox.Show("Under development");
             SignUp signUp = new SignUp();
             signUp.Show();
+        }
+
+        private void btn_BrowseRSA_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog browse = new OpenFileDialog();
+            browse.InitialDirectory = @"C:\Users\Nicolae\Documents\GitHub\warehouse\docs\vbohudskyi\rsa";
+            browse.FileName = "*.rsa";
+            browse.FilterIndex = 1;
+            browse.Multiselect = false;
+
+
+            if (browse.ShowDialog() == DialogResult.OK)
+            {
+                string fileName = browse.FileName;
+                lb_RSA.Text = Path.GetFileNameWithoutExtension(fileName);
+            }
         }
     }
 }

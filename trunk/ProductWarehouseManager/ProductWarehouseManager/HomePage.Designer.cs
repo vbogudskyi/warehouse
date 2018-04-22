@@ -41,6 +41,7 @@
             this.btn_UserManage = new System.Windows.Forms.Button();
             this.btn_MyAcc = new System.Windows.Forms.Button();
             this.btn_Exit = new System.Windows.Forms.Button();
+            this.btn_RetrieveProduct = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -66,6 +67,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_RetrieveProduct);
             this.groupBox1.Controls.Add(this.btn_BulkLoad);
             this.groupBox1.Controls.Add(this.btn_Update);
             this.groupBox1.Controls.Add(this.btn_Add);
@@ -80,7 +82,7 @@
             // btn_BulkLoad
             // 
             this.btn_BulkLoad.AutoSize = true;
-            this.btn_BulkLoad.Location = new System.Drawing.Point(6, 135);
+            this.btn_BulkLoad.Location = new System.Drawing.Point(6, 190);
             this.btn_BulkLoad.Name = "btn_BulkLoad";
             this.btn_BulkLoad.Size = new System.Drawing.Size(197, 29);
             this.btn_BulkLoad.TabIndex = 2;
@@ -91,7 +93,7 @@
             // btn_Update
             // 
             this.btn_Update.AutoSize = true;
-            this.btn_Update.Location = new System.Drawing.Point(6, 85);
+            this.btn_Update.Location = new System.Drawing.Point(6, 138);
             this.btn_Update.Name = "btn_Update";
             this.btn_Update.Size = new System.Drawing.Size(197, 29);
             this.btn_Update.TabIndex = 1;
@@ -166,6 +168,17 @@
             this.btn_Exit.UseVisualStyleBackColor = true;
             this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
+            // btn_RetrieveProduct
+            // 
+            this.btn_RetrieveProduct.AutoSize = true;
+            this.btn_RetrieveProduct.Location = new System.Drawing.Point(6, 87);
+            this.btn_RetrieveProduct.Name = "btn_RetrieveProduct";
+            this.btn_RetrieveProduct.Size = new System.Drawing.Size(197, 29);
+            this.btn_RetrieveProduct.TabIndex = 3;
+            this.btn_RetrieveProduct.Text = "Retrieve Product";
+            this.btn_RetrieveProduct.UseVisualStyleBackColor = true;
+            this.btn_RetrieveProduct.Click += new System.EventHandler(this.btn_RetrieveProduct_Click);
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -202,5 +215,6 @@
         private System.Windows.Forms.Button btn_RoleManage;
         private System.Windows.Forms.Button btn_BulkLoad;
         private System.Windows.Forms.Button btn_Exit;
+        private System.Windows.Forms.Button btn_RetrieveProduct;
     }
 }

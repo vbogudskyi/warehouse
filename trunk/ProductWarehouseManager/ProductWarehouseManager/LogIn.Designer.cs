@@ -34,7 +34,6 @@
             this.lnklbl_SignUp = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
             this.lb_DateTime = new System.Windows.Forms.Label();
-            this.chkbx_Trust = new System.Windows.Forms.CheckBox();
             this.btn_SignIn = new System.Windows.Forms.Button();
             this.txt_Password = new System.Windows.Forms.TextBox();
             this.txt_UserId = new System.Windows.Forms.TextBox();
@@ -43,6 +42,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btn_BrowseRSA = new System.Windows.Forms.Button();
+            this.lb_RSA = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // panel1
@@ -60,7 +61,7 @@
             // 
             this.lnklbl_SignUp.AutoSize = true;
             this.lnklbl_SignUp.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnklbl_SignUp.Location = new System.Drawing.Point(583, 227);
+            this.lnklbl_SignUp.Location = new System.Drawing.Point(621, 264);
             this.lnklbl_SignUp.Name = "lnklbl_SignUp";
             this.lnklbl_SignUp.Size = new System.Drawing.Size(72, 14);
             this.lnklbl_SignUp.TabIndex = 21;
@@ -73,7 +74,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(585, 211);
+            this.label4.Location = new System.Drawing.Point(623, 248);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(70, 14);
             this.label4.TabIndex = 20;
@@ -87,23 +88,12 @@
             this.lb_DateTime.Size = new System.Drawing.Size(0, 13);
             this.lb_DateTime.TabIndex = 19;
             // 
-            // chkbx_Trust
-            // 
-            this.chkbx_Trust.AutoSize = true;
-            this.chkbx_Trust.Location = new System.Drawing.Point(385, 247);
-            this.chkbx_Trust.Name = "chkbx_Trust";
-            this.chkbx_Trust.Size = new System.Drawing.Size(79, 17);
-            this.chkbx_Trust.TabIndex = 18;
-            this.chkbx_Trust.Text = "Trusted PC";
-            this.toolTip1.SetToolTip(this.chkbx_Trust, "Trust");
-            this.chkbx_Trust.UseVisualStyleBackColor = true;
-            // 
             // btn_SignIn
             // 
             this.btn_SignIn.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SignIn.Location = new System.Drawing.Point(385, 196);
+            this.btn_SignIn.Location = new System.Drawing.Point(385, 248);
             this.btn_SignIn.Name = "btn_SignIn";
-            this.btn_SignIn.Size = new System.Drawing.Size(75, 28);
+            this.btn_SignIn.Size = new System.Drawing.Size(90, 28);
             this.btn_SignIn.TabIndex = 17;
             this.btn_SignIn.Text = "Sign In";
             this.toolTip1.SetToolTip(this.btn_SignIn, "Sign In");
@@ -113,7 +103,7 @@
             // txt_Password
             // 
             this.txt_Password.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Password.Location = new System.Drawing.Point(458, 148);
+            this.txt_Password.Location = new System.Drawing.Point(496, 148);
             this.txt_Password.Name = "txt_Password";
             this.txt_Password.PasswordChar = '*';
             this.txt_Password.Size = new System.Drawing.Size(197, 22);
@@ -123,7 +113,7 @@
             // txt_UserId
             // 
             this.txt_UserId.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_UserId.Location = new System.Drawing.Point(458, 98);
+            this.txt_UserId.Location = new System.Drawing.Point(496, 98);
             this.txt_UserId.Name = "txt_UserId";
             this.txt_UserId.Size = new System.Drawing.Size(197, 22);
             this.txt_UserId.TabIndex = 15;
@@ -166,17 +156,36 @@
             this.panel2.Size = new System.Drawing.Size(1, 293);
             this.panel2.TabIndex = 23;
             // 
+            // btn_BrowseRSA
+            // 
+            this.btn_BrowseRSA.Location = new System.Drawing.Point(385, 198);
+            this.btn_BrowseRSA.Name = "btn_BrowseRSA";
+            this.btn_BrowseRSA.Size = new System.Drawing.Size(90, 28);
+            this.btn_BrowseRSA.TabIndex = 24;
+            this.btn_BrowseRSA.Text = "Browse RSA...";
+            this.btn_BrowseRSA.UseVisualStyleBackColor = true;
+            this.btn_BrowseRSA.Click += new System.EventHandler(this.btn_BrowseRSA_Click);
+            // 
+            // lb_RSA
+            // 
+            this.lb_RSA.AutoSize = true;
+            this.lb_RSA.Location = new System.Drawing.Point(493, 202);
+            this.lb_RSA.Name = "lb_RSA";
+            this.lb_RSA.Size = new System.Drawing.Size(0, 13);
+            this.lb_RSA.TabIndex = 25;
+            // 
             // LogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(709, 375);
+            this.ClientSize = new System.Drawing.Size(737, 375);
+            this.Controls.Add(this.lb_RSA);
+            this.Controls.Add(this.btn_BrowseRSA);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lnklbl_SignUp);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lb_DateTime);
-            this.Controls.Add(this.chkbx_Trust);
             this.Controls.Add(this.btn_SignIn);
             this.Controls.Add(this.txt_Password);
             this.Controls.Add(this.txt_UserId);
@@ -197,7 +206,6 @@
         private System.Windows.Forms.LinkLabel lnklbl_SignUp;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lb_DateTime;
-        private System.Windows.Forms.CheckBox chkbx_Trust;
         private System.Windows.Forms.Button btn_SignIn;
         private System.Windows.Forms.TextBox txt_Password;
         private System.Windows.Forms.TextBox txt_UserId;
@@ -206,5 +214,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button btn_BrowseRSA;
+        private System.Windows.Forms.Label lb_RSA;
     }
 }
