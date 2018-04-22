@@ -59,6 +59,7 @@
     </Compile>
     <Compile Include="Classes\Invoice.cs" />
     <Compile Include="Classes\Product.cs" />
+    <Compile Include="Classes\ReadRSA.cs" />
     <Compile Include="HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
