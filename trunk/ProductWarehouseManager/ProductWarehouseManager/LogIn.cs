@@ -45,16 +45,14 @@ namespace ProductWarehouseManager
             string user = txt_UserId.Text;
             string pass = txt_Password.Text;
 
-<<<<<<< HEAD
+
             /*login = new LogInClass("admin", "1234");
-=======
             // ComponentIntegrationFacade.INSTANCE.SafeUser.login(user, pass, readRsa.readRsa());
           //  ComponentIntegrationFacade.INSTANCE.SafePermissions.grantPermissionForRole();
 
 
 
             login = new LogInClass("admin", "1234");
->>>>>>> 75b0ee3948168822ede50a8e0f03dd5c5d8fab74
             //check if eligible to be logged in 
             if (login.IsLoggedIn(user, pass))
             {
