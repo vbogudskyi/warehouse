@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ComponentsIntergrationMiddleware.api.master.model
 {
-    sealed class Company
+    public sealed class Company
     {
         private int id;
         private String cid;

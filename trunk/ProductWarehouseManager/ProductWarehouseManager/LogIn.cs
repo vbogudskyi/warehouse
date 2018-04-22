@@ -1,4 +1,5 @@
-﻿using ProductWarehouseManager.Classes;
+﻿using ComponentsIntergrationMiddleware;
+using ProductWarehouseManager.Classes;
 using ProductWarehouseManager.LogInSignUp;
 using System;
 using System.Collections.Generic;
@@ -35,7 +36,7 @@ namespace ProductWarehouseManager
             string user = txt_UserId.Text;
             string pass = txt_Password.Text;
 
-            login = new LogInClass("admin", "1234");
+            /*login = new LogInClass("admin", "1234");
             //check if eligible to be logged in 
             if (login.IsLoggedIn(user, pass))
             {
@@ -43,7 +44,7 @@ namespace ProductWarehouseManager
                 homePage = new HomePage();
                 homePage.Show();
                 Hide();
-            }
+            }*/
 
             user = "";
             pass = "";
