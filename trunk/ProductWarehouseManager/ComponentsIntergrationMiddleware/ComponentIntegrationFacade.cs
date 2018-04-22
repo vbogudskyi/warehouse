@@ -10,7 +10,7 @@ namespace ComponentsIntergrationMiddleware
 {
     public sealed class ComponentIntegrationFacade
     {
-        private ComponentIntegrationFacade instance = new ComponentIntegrationFacade();
+        private static ComponentIntegrationFacade instance = new ComponentIntegrationFacade();
         private SecureUser user;
         private SecureRole role;
         private SecurePermissions permissions;
@@ -24,7 +24,7 @@ namespace ComponentsIntergrationMiddleware
             document = new SecureDocument(user);
         }
 
-        public ComponentIntegrationFacade INSTANCE
+        public static ComponentIntegrationFacade INSTANCE
         {
             get { return instance; }
         }

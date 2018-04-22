@@ -42,14 +42,19 @@ namespace ProductWarehouseManager
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
-           // String list = ((CheckBox)sender).Text;
-            CheckBox chk = (CheckBox)sender;
-            if (chk.Checked)
+          
+            
+        }
+
+        private void on_Checked(object sender, EventArgs e)
+        {
+            String list = ((CheckBox)sender).Text;
+            
+            switch (list)
             {
-                switch (chk.Name)
-                {
-                    case "All":
-                        {
+                case "All":
+                    {
+                        if( ckbx_All.Checked){
 
                             data.Add("Insert");
                             data.Add("Update");
@@ -59,88 +64,93 @@ namespace ProductWarehouseManager
                             //  data.Add("Create Reports");
                             data.Add("Data Transfer");
 
+                            ckbx_Insert.Enabled = false;
+                            ckbx_Update.Enabled = false;
+                            ckbx_Select.Enabled = false;
+                            clbx_Delete.Enabled = false;
+                            ckbx_User.Enabled = false;
+                            ckbx_BulkLoad.Enabled = false;
+                        }
+                        else
+                        {
+                            data.Remove("Insert");
+                            data.Remove("Update");
+                            data.Remove("Select");
+                            data.Remove("Delete");
+                            data.Remove("User");
+                            //  data.Remove("Create Reports");
+                            data.Remove("Data Transfer");
 
-                            break;
+                            ckbx_Insert.Enabled = true;
+                            ckbx_Update.Enabled = true;
+                            ckbx_Select.Enabled = true;
+                            clbx_Delete.Enabled = true;
+                            ckbx_User.Enabled = true;
+                            ckbx_BulkLoad.Enabled = true;
                         }
-                    case "Insert":
-                        {
-                            data.Add("Insert");
-                            break;
-                        }
-                    case "Update":
-                        {
-                            data.Add("Update");
-                            break;
-                        }
-                    case "Select":
-                        {
-                            data.Add("Select");
-                            break;
-                        }
-                    case "Delete":
-                        {
-                            data.Add("Delete");
-                            break;
-                        }
-                    case "User":
-                        {
-                            data.Add("User");
-                            break;
-                        }
-                    //case "Create Reports":
-                    //    {
-                    //        data.Add("Create Reports");
-                    //        break;
-                    //    }
-                    case "Data Transfer":
-                        {
-                            data.Add("Data Transfer");
-                            break;
-                        }
-                }
 
-            }
-        }
-
-        private void on_Checked(object sender, EventArgs e)
-        {
-            String list = ((CheckBox)sender).Text;
-            switch (list)
-            {
-                case "All":
-                    {
-                        data.Add("Insert");
-                        data.Add("Update");
-                        data.Add("Select");
-                        data.Add("Delete");
-                        data.Add("User");
-                        //  data.Add("Create Reports");
-                        data.Add("Data Transfer");
                         break;
                     }
                 case "Insert":
                     {
-                        data.Add("Insert");
+                        if (ckbx_Insert.Checked)
+                        {
+                            data.Add("Insert");
+                        }
+                        else
+                        {
+                            data.Remove("Insert");
+                        }
+                           
                         break;
                     }
                 case "Update":
                     {
-                        data.Add("Update");
+                        if (ckbx_Update.Checked)
+                        {
+                            data.Add("Update");
+                        }
+                        else
+                        {
+                            data.Remove("Update");
+                        }
                         break;
                     }
                 case "Select":
                     {
-                        data.Add("Select");
+                        if (ckbx_Select.Checked)
+                        {
+                            data.Add("Select");
+                        }
+                        else
+                        {
+                            data.Remove("Select");
+                        }
+
                         break;
                     }
                 case "Delete":
                     {
-                        data.Add("Delete");
+                        if (clbx_Delete.Checked)
+                        {
+                            data.Add("Delete");
+                        }
+                        else
+                        {
+                            data.Remove("Delete");
+                        }
                         break;
                     }
                 case "User":
                     {
-                        data.Add("User");
+                        if (ckbx_User.Checked)
+                        {
+                            data.Add("User");
+                        }
+                        else
+                        {
+                            data.Remove("User");
+                        }
                         break;
                     }
                 //case "Create Reports":
@@ -150,7 +160,14 @@ namespace ProductWarehouseManager
                 //    }
                 case "Data Transfer":
                     {
-                        data.Add("Data Transfer");
+                        if (ckbx_BulkLoad.Checked)
+                        {
+                            data.Add("Data Transfer");
+                        }
+                        else
+                        {
+                            data.Remove("Data Transfer");
+                        }
                         break;
                     }
             }

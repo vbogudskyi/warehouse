@@ -1,4 +1,5 @@
-﻿using ProductWarehouseManager.Classes;
+﻿using ComponentsIntergrationMiddleware;
+using ProductWarehouseManager.Classes;
 using ProductWarehouseManager.LogInSignUp;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,7 @@ namespace ProductWarehouseManager
         LogInClass login;
         HomePage homePage;
         ReadRSA readRsa;
+
         public LogIn()
         {
             InitializeComponent();
@@ -26,14 +28,27 @@ namespace ProductWarehouseManager
 
         private void LogIn_Load(object sender, EventArgs e)
         {
+            ComponentIntegrationFacade.INSTANCE.SafeUser.Logger = log;
+        }
+
+        //add in each class where insatanceFasade is called
+        public void log(int code, String message)
+        {
 
         }
+            
+
 
         private void btn_SignIn_Click(object sender, EventArgs e)
         {
             //define local variables from the user inputs 
             string user = txt_UserId.Text;
             string pass = txt_Password.Text;
+
+            // ComponentIntegrationFacade.INSTANCE.SafeUser.login(user, pass, readRsa.readRsa());
+          //  ComponentIntegrationFacade.INSTANCE.SafePermissions.grantPermissionForRole();
+
+
 
             login = new LogInClass("admin", "1234");
             //check if eligible to be logged in 
