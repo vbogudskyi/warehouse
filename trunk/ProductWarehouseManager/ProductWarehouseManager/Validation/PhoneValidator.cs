@@ -9,18 +9,12 @@ namespace ProductWarehouseManager.Validation
 {
     class PhoneValidator : IValidator
     {
-        Regex pattern;
-        public Boolean validation(string data)
+        
+        public bool validation(string data)
         {
-            pattern = new Regex("^(\\d{3})(?:[\\.\\-\\s]?)(\\d{3})(?:[-\\.\\s]?)(\\d{4})$");
-            if (pattern.IsMatch(data))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            Regex pattern = new Regex("^(\\d{3})(?:[\\.\\-\\s]?)(\\d{3})(?:[-\\.\\s]?)(\\d{4})$");
+
+            return pattern.IsMatch(data);
         }
     }
 }

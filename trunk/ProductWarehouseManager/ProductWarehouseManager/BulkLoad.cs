@@ -15,6 +15,7 @@ namespace ProductWarehouseManager
     {
         string fileName;
         string[] allFiles;
+        string[] logs;
 
         public BulkLoad()
         {
@@ -68,6 +69,24 @@ namespace ProductWarehouseManager
                 MessageBox.Show(Path.GetFileName(value).ToString()+"Removed from the list");
 
             }
+        }
+
+        private void btn_ClearAll_Click(object sender, EventArgs e)
+        {
+            lsbx_BulkLoad.Items.Clear();
+            allFiles = null;
+        }
+
+        private void btn_ClearLog_Click(object sender, EventArgs e)
+        {
+            lsbx_Logs.Items.Clear();
+            logs = null;
+        }
+
+        private void btn_Load_Click(object sender, EventArgs e)
+        {
+            //need to add teh code
+            MessageBox.Show("Need to add teh logic");
         }
     }
 }

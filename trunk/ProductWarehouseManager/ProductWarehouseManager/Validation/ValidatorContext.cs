@@ -6,14 +6,19 @@ using System.Threading.Tasks;
 
 namespace ProductWarehouseManager.Validation
 {
-    class ValidatorContext
+    class ValidatorContext : IValidator
     {
         private IValidator validate;
 
-        public Boolean SetValidation(IValidator validate)
+        public ValidatorContext(IValidator validate)
         {
             this.validate = validate;
-            return true;
         }
+
+        public bool validation(string data)
+        {
+            return validate.validation(data);
+        }
+
     }
 }

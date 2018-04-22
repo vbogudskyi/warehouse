@@ -92,6 +92,7 @@
             // 
             this.txt_RSA.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_RSA.Location = new System.Drawing.Point(162, 330);
+            this.txt_RSA.MaxLength = 256;
             this.txt_RSA.Name = "txt_RSA";
             this.txt_RSA.Size = new System.Drawing.Size(205, 22);
             this.txt_RSA.TabIndex = 40;
@@ -100,6 +101,7 @@
             // 
             this.txt_LastName.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_LastName.Location = new System.Drawing.Point(162, 250);
+            this.txt_LastName.MaxLength = 25;
             this.txt_LastName.Name = "txt_LastName";
             this.txt_LastName.Size = new System.Drawing.Size(205, 22);
             this.txt_LastName.TabIndex = 39;
@@ -108,6 +110,7 @@
             // 
             this.txt_FirstName.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_FirstName.Location = new System.Drawing.Point(162, 210);
+            this.txt_FirstName.MaxLength = 25;
             this.txt_FirstName.Name = "txt_FirstName";
             this.txt_FirstName.Size = new System.Drawing.Size(205, 22);
             this.txt_FirstName.TabIndex = 38;
@@ -168,6 +171,7 @@
             // 
             this.txt_Password.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Password.Location = new System.Drawing.Point(162, 130);
+            this.txt_Password.MaxLength = 25;
             this.txt_Password.Name = "txt_Password";
             this.txt_Password.Size = new System.Drawing.Size(205, 22);
             this.txt_Password.TabIndex = 33;
@@ -177,6 +181,7 @@
             // 
             this.txt_UserId.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_UserId.Location = new System.Drawing.Point(162, 90);
+            this.txt_UserId.MaxLength = 50;
             this.txt_UserId.Name = "txt_UserId";
             this.txt_UserId.Size = new System.Drawing.Size(205, 22);
             this.txt_UserId.TabIndex = 32;
@@ -222,6 +227,7 @@
             // 
             this.txt_Password2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Password2.Location = new System.Drawing.Point(162, 170);
+            this.txt_Password2.MaxLength = 25;
             this.txt_Password2.Name = "txt_Password2";
             this.txt_Password2.Size = new System.Drawing.Size(205, 22);
             this.txt_Password2.TabIndex = 45;
@@ -255,7 +261,6 @@
             // 
             // cmbx_Company
             // 
-            this.cmbx_Company.Enabled = false;
             this.cmbx_Company.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbx_Company.FormattingEnabled = true;
             this.cmbx_Company.Location = new System.Drawing.Point(162, 435);
@@ -267,6 +272,7 @@
             // 
             this.txt_Phone.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Phone.Location = new System.Drawing.Point(162, 290);
+            this.txt_Phone.MaxLength = 15;
             this.txt_Phone.Name = "txt_Phone";
             this.txt_Phone.Size = new System.Drawing.Size(205, 22);
             this.txt_Phone.TabIndex = 49;
@@ -280,9 +286,9 @@
             this.label10.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(12, 290);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(58, 16);
+            this.label10.Size = new System.Drawing.Size(53, 16);
             this.label10.TabIndex = 48;
-            this.label10.Text = "Phone*: ";
+            this.label10.Text = "Phone: ";
             // 
             // btn_Back
             // 

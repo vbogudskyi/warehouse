@@ -32,17 +32,14 @@
             this.lstbx_SearchManager = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_Id = new System.Windows.Forms.TextBox();
             this.txt_Name = new System.Windows.Forms.TextBox();
             this.txt_Quantity = new System.Windows.Forms.TextBox();
-            this.txt_Description = new System.Windows.Forms.TextBox();
             this.btn_Update = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btn_Back = new System.Windows.Forms.Button();
             this.btn_Search = new System.Windows.Forms.Button();
-            this.btn_Suspend = new System.Windows.Forms.Button();
             this.btn_Delete = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbx_Type = new System.Windows.Forms.ComboBox();
@@ -54,6 +51,8 @@
             this.ckbx_All = new System.Windows.Forms.CheckBox();
             this.txt_Search = new System.Windows.Forms.TextBox();
             this.ckbx_UserName = new System.Windows.Forms.CheckBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lstbx_SearchManager
@@ -81,15 +80,6 @@
             this.label2.Size = new System.Drawing.Size(75, 13);
             this.label2.TabIndex = 56;
             this.label2.Text = "Product Name";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(256, 259);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 13);
-            this.label4.TabIndex = 58;
-            this.label4.Text = "Product Description";
             // 
             // label5
             // 
@@ -122,13 +112,6 @@
             this.txt_Quantity.Size = new System.Drawing.Size(217, 20);
             this.txt_Quantity.TabIndex = 63;
             // 
-            // txt_Description
-            // 
-            this.txt_Description.Location = new System.Drawing.Point(398, 259);
-            this.txt_Description.Name = "txt_Description";
-            this.txt_Description.Size = new System.Drawing.Size(217, 20);
-            this.txt_Description.TabIndex = 64;
-            // 
             // btn_Update
             // 
             this.btn_Update.Location = new System.Drawing.Point(259, 386);
@@ -160,19 +143,9 @@
             this.toolTip1.SetToolTip(this.btn_Search, "Save");
             this.btn_Search.UseVisualStyleBackColor = true;
             // 
-            // btn_Suspend
-            // 
-            this.btn_Suspend.Location = new System.Drawing.Point(355, 386);
-            this.btn_Suspend.Name = "btn_Suspend";
-            this.btn_Suspend.Size = new System.Drawing.Size(75, 24);
-            this.btn_Suspend.TabIndex = 87;
-            this.btn_Suspend.Text = "Suspend/Activate";
-            this.toolTip1.SetToolTip(this.btn_Suspend, "Save");
-            this.btn_Suspend.UseVisualStyleBackColor = true;
-            // 
             // btn_Delete
             // 
-            this.btn_Delete.Location = new System.Drawing.Point(446, 386);
+            this.btn_Delete.Location = new System.Drawing.Point(398, 386);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(75, 24);
             this.btn_Delete.TabIndex = 88;
@@ -262,7 +235,7 @@
             // 
             this.txt_Search.Location = new System.Drawing.Point(386, 19);
             this.txt_Search.Name = "txt_Search";
-            this.txt_Search.Size = new System.Drawing.Size(109, 20);
+            this.txt_Search.Size = new System.Drawing.Size(148, 20);
             this.txt_Search.TabIndex = 84;
             // 
             // ckbx_UserName
@@ -275,13 +248,31 @@
             this.ckbx_UserName.Text = "UserName";
             this.ckbx_UserName.UseVisualStyleBackColor = true;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(398, 267);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(217, 21);
+            this.comboBox1.TabIndex = 90;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(256, 267);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 13);
+            this.label4.TabIndex = 89;
+            this.label4.Text = "Suspend";
+            // 
             // UpdateProductManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(649, 444);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btn_Delete);
-            this.Controls.Add(this.btn_Suspend);
             this.Controls.Add(this.ckbx_UserName);
             this.Controls.Add(this.btn_Search);
             this.Controls.Add(this.txt_Search);
@@ -294,18 +285,16 @@
             this.Controls.Add(this.btn_Back);
             this.Controls.Add(this.cmbx_Type);
             this.Controls.Add(this.btn_Update);
-            this.Controls.Add(this.txt_Description);
             this.Controls.Add(this.txt_Quantity);
             this.Controls.Add(this.txt_Name);
             this.Controls.Add(this.txt_Id);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lstbx_SearchManager);
             this.Name = "UpdateProductManager";
-            this.Text = "Search/Update ProductManager";
+            this.Text = "Search or Update ProductManager";
             this.Load += new System.EventHandler(this.UpdateProductManager_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -317,12 +306,10 @@
         private System.Windows.Forms.ListBox lstbx_SearchManager;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txt_Id;
         private System.Windows.Forms.TextBox txt_Name;
         private System.Windows.Forms.TextBox txt_Quantity;
-        private System.Windows.Forms.TextBox txt_Description;
         private System.Windows.Forms.Button btn_Update;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label label3;
@@ -337,7 +324,8 @@
         private System.Windows.Forms.TextBox txt_Search;
         private System.Windows.Forms.Button btn_Search;
         private System.Windows.Forms.CheckBox ckbx_UserName;
-        private System.Windows.Forms.Button btn_Suspend;
         private System.Windows.Forms.Button btn_Delete;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label4;
     }
 }
