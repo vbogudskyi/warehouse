@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ComponentsIntergrationMiddleware.api.master.model
 {
-    sealed class Role
+    public sealed class Role
     {
         private int rid;
         private String name;

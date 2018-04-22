@@ -16,14 +16,13 @@ namespace ComponentsIntergrationMiddleware.api.master.dal
         public void createUser(String login, String password,
                                String firstName, String lastName, String telephone,
                                String rsa, bool active = true,
-                               String role = null, String company = null
+                               String company = null
                               )
         {
-            rawQuery(String.Format("INSERT INTO Users (LOGIN, PSW, FNAME, LNAME, RSA, ACTIVE, RID, CID, TELEPHONE) VALUES({0}, {1}, {2}, {3}, {4}, " +
-                "{5}, {6}, {7}, {8}, {9})", login, password, firstName, lastName, rsa, active ? 1 : 0,
-                String.Format("(SELECT RID FROM ROLE WHERE NAME={0}) ", role ?? "Employee"),
-                String.Format("(SELECT CID FROM COMPANY WHERE NAME={0}) ", company ?? "Common Company"), telephone
-                ));
+            String query = String.Format("INSERT INTO Users (LOGIN, PSW, FNAME, LNAME, RSA, ACTIVE, CID, TELEPHONE) VALUES('{0}', '{1}', '{2}', '{3}', '{4}', " +
+                "'{5}', {6}, {7}, '{8}')", login, password, firstName, lastName, rsa, active ? 1 : 0,
+                String.Format("(SELECT CID FROM COMPANY WHERE NAME={0}) ", company ?? "Common Company"), telephone);
+            rawQuery(query);
         }
 
         public void updateUser(String uid, String login, String password,
@@ -31,17 +30,18 @@ namespace ComponentsIntergrationMiddleware.api.master.dal
                                String rsa, bool active = true,
                                String role = null, String company = null)
         {
-            rawQuery("UPDATE Users SET " +
-                String.Format("LOGIN={0}, ", login) +
-                String.Format("PSW={0}, ", password) + 
-                String.Format("FNAME={0}, ", firstName) +
-                String.Format("LNAME={0}, ", lastName) +
-                String.Format("ACTIVE={0}, ", active ? 1:0) +
-                String.Format("RSA={0} ", rsa)+
-                String.Format("RID={0}, ", String.Format("(SELECT RID FROM ROLE WHERE NAME={0}) ", role ?? "Admin")) + 
+            String query = "UPDATE Users SET " +
+                String.Format("LOGIN='{0}', ", login) +
+                String.Format("PSW='{0}', ", password) +
+                String.Format("FNAME='{0}', ", firstName) +
+                String.Format("LNAME='{0}', ", lastName) +
+                String.Format("ACTIVE={0}, ", active ? 1 : 0) +
+                String.Format("RSA='{0}' ", rsa) +
+                String.Format("RID={0}, ", String.Format("(SELECT RID FROM ROLE WHERE NAME={0}) ", role ?? "Admin")) +
                 String.Format("CID={0}, ", String.Format("(SELECT CID FROM COMPANY WHERE NAME={0}) ", company ?? "Common Company") +
-                String.Format("WHERE UID={0} ", uid)
-           ));
+                String.Format("WHERE UID='{0}' ", uid)
+           );
+            rawQuery(query);
         }
 
         public User getUser(String uid)

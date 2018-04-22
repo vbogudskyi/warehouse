@@ -28,6 +28,14 @@ namespace ComponentsIntergrationMiddleware.api.master.dal
             return get(String.Format("SELECT * FROM Role"));
         }
 
+        public Role getUserRole(String uid)
+        {
+            String query = String.Format("SELECT * FROM Role R " +
+                "JOIN Users U ON (R.RID=U.RID) " +
+                "WHERE U.UID='{0}'", uid);
+            return get(query).FirstOrDefault();
+        }
+
         public void removeRole(int rid)
         {
             rawQuery(String.Format("DELETE FROM Role WHERE RID={0}", rid));

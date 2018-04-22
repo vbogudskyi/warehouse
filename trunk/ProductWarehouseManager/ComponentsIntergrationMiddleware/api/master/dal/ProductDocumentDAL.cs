@@ -13,6 +13,30 @@ namespace ComponentsIntergrationMiddleware.api.master.dal
     {
         public ProductDocumentDAL(SqlHelper helper) : base(helper) {}
 
+        public void addDocument(ProductDocument document)
+        {
+            rawQuery(String.Format("INSERT INTO ProductDocument (Name, PrID, Quantity, Description) VALUES ( " +
+                "'{0}', {1}, {2}, '{3}'", document.Name, document.PrID, document.Quantity, document.Description));
+        }
+
+        public ProductDocument getDocument(String documentID)
+        {
+            return get(String.Format("SELECT * FROM ProductDocument WHERE DocumentID='{0}'", documentID)).FirstOrDefault();
+        }
+
+        public ProductDocument getDocument(String name, String prID, int quantity, String description)
+        {
+            String query = String.Format("SELECT * FROM ProductDocument " +
+                "WHERE Name='{0}', PrID={1}, Quantity={2}, Description='{3}'", 
+                name, prID, quantity, description);
+            return get(query).FirstOrDefault();
+        }
+
+        public void removeDocument(String documentId)
+        {
+            rawQuery(String.Format("DELETE FROM ProductDocument WHERE DocumentID='{0}'", documentId));
+        }
+
         protected override ProductDocument getFromReader(SqlDataReader reader)
         {
             ProductDocument document = new ProductDocument();

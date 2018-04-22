@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ComponentsIntergrationMiddleware.api.master.model
 {
-    sealed class SignIn
+    public sealed class SignIn
     {
         private int id;
         private String uid;

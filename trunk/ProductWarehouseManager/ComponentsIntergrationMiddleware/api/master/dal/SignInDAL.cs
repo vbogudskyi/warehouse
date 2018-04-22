@@ -16,21 +16,22 @@ namespace ComponentsIntergrationMiddleware.api.master.dal
 
         public SignIn login(String login, String password, String rsa)
         {
-            rawQuery(String.Format("INSERT INTO SignIn (UID, IP) VALUES({0}, {1})",
-                String.Format("(SELECT UID FROM Users WHERE LOGIN={0} AND PSW={1} AND RSA={2})",
+            rawQuery(String.Format("INSERT INTO SignIn (UID, IP) VALUES('{0}, '{1}')",
+                String.Format("(SELECT UID FROM Users WHERE LOGIN='{0}' AND PSW='{1}' AND RSA='{2}')",
                 login, password, rsa), NetworkUtils.getIPAddress()));
-            return get(String.Format("SELECT * FROM SignIn WHERE UID={0}",
-                String.Format("SELECT UID FROM Users WHERE LOGIN={0} AND PSW={1} AND RSA={2})", login, password, rsa))).FirstOrDefault();
+            return get(String.Format("SELECT * FROM SignIn WHERE UID='{0}'",
+                String.Format("SELECT UID FROM Users WHERE LOGIN='{0}' AND PSW='{1}' AND RSA='{2}')", login, password, rsa))).FirstOrDefault();
         }
 
-        public void logout(String uid, String cookie)
+        public SignIn logout(String uid, String cookie)
         {
-            rawQuery(String.Format("DELETE FROM SignIn WHERE UID={0} AND COOKIE={1}", uid, cookie));
+            rawQuery(String.Format("DELETE FROM SignIn WHERE UID='{0}' AND COOKIE='{1}'", uid, cookie));
+            return null;
         }
 
-        public bool isLoggendIn(String uid, String cookie)
+        public bool isLoggedIn(String uid, String cookie)
         {
-            SignIn logon = get(String.Format("SELECT * FROM SignIn WHERE UID={0} AND COOKIE={1}", uid, cookie)).FirstOrDefault();
+            SignIn logon = get(String.Format("SELECT * FROM SignIn WHERE UID='{0}' AND COOKIE='{1}'", uid, cookie)).FirstOrDefault();
             return logon != null;
         }
 

@@ -23,6 +23,11 @@ namespace ComponentsIntergrationMiddleware.api.master.dal
             return get(String.Format("SELECT * FROM ProductType WHERE TID={0}", tid)).FirstOrDefault();
         }
 
+        public ProductType getProductType(String name)
+        {
+            return get(String.Format("SELECT * FROM ProductType WHERE Name={0}", name)).FirstOrDefault();
+        }
+
         public List<ProductType> getAllProductType()
         {
             return get("SELECT * FROM ProductType");
