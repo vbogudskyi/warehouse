@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 
 namespace ComponentsIntergrationMiddleware.api.master.model
 {
-    public sealed class RolePermission
+    sealed class Security
     {
-        private int rpid;
+        private String uid;
         private int rid;
         private int pid;
+        private String pname;
 
-        public int RPID
+        public String UID
         {
-            get { return rpid; }
-            set { rpid = value; }
+            get { return uid; }
+            set { uid = value; }
         }
 
         public int RID
@@ -28,6 +29,12 @@ namespace ComponentsIntergrationMiddleware.api.master.model
         {
             get { return pid; }
             set { pid = value; }
+        }
+
+        public String PNAME
+        {
+            get { return pname; }
+            set { pname = value; }
         }
     }
 }

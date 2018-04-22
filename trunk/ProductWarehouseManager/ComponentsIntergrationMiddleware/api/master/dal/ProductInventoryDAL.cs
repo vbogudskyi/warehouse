@@ -13,6 +13,32 @@ namespace ComponentsIntergrationMiddleware.api.master.dal
     {
         public ProductInventoryDAL(SqlHelper helper) : base(helper){}
 
+        public void addProduct(int tid, String name, int quantity)
+        {
+            rawQuery(String.Format("INSERT INTO ProductInventory(TID, Name, TotalQuantity) VALUES( " +
+                "{0}, '{1}',{2})", tid, name, quantity));
+        }
+
+        public ProductInventory getProduct(String name, int tid)
+        {
+            String query = String.Format("SELECT * FROM ProductInventory PI " +
+                "JOIN ProductType PT ON (PI.TID=PT.TID) " +
+                "WHERE Name='{0}' AND TID={1} ", name, tid);
+            return get(query).FirstOrDefault();
+        }
+
+        public void updateProduct(ProductInventory product)
+        {
+            String query = String.Format("UPDATE ProductInventory SET " +
+                "TID={0}, Name='{1}', TotalQuantity={3}, " +
+                "WHERE PrID='{4}'", product.TID, product.Name, product.TotalQuantity);
+            rawQuery(query);
+        }
+
+        public void deleteProduct(String prID)
+        {
+            rawQuery(String.Format("DELETE FROM ProductInventory WHERE prID='{0}'", prID));
+        }
 
         protected override ProductInventory getFromReader(SqlDataReader reader)
         {

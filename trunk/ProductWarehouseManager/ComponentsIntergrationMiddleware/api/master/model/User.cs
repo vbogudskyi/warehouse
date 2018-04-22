@@ -45,8 +45,8 @@ namespace ComponentsIntergrationMiddleware.api.master.model
 
         public String LNAME
         {
-            get { return uid; }
-            set { uid = value; }
+            get { return lname; }
+            set { lname = value; }
         }
 
         public String RSA
