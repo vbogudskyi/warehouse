@@ -3,10 +3,6 @@ using ComponentsIntergrationMiddleware.api.master.dal;
 using ComponentsIntergrationMiddleware.api.master.helper;
 using ComponentsIntergrationMiddleware.api.master.model;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ComponentsIntergrationMiddleware.api.security
 {
