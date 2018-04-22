@@ -179,6 +179,7 @@
             this.ckbx_ProdNumb.TabIndex = 78;
             this.ckbx_ProdNumb.Text = "Product#";
             this.ckbx_ProdNumb.UseVisualStyleBackColor = true;
+            this.ckbx_ProdNumb.CheckedChanged += new System.EventHandler(this.on_Change);
             // 
             // ckbx_ProdName
             // 
@@ -190,6 +191,7 @@
             this.ckbx_ProdName.TabStop = false;
             this.ckbx_ProdName.Text = "ProductName";
             this.ckbx_ProdName.UseVisualStyleBackColor = true;
+            this.ckbx_ProdName.CheckedChanged += new System.EventHandler(this.on_Change);
             // 
             // ckbx_ProdType
             // 
@@ -200,6 +202,7 @@
             this.ckbx_ProdType.TabIndex = 80;
             this.ckbx_ProdType.Text = "Product Type";
             this.ckbx_ProdType.UseVisualStyleBackColor = true;
+            this.ckbx_ProdType.CheckedChanged += new System.EventHandler(this.on_Change);
             // 
             // ckbx_DocName
             // 
@@ -210,6 +213,7 @@
             this.ckbx_DocName.TabIndex = 81;
             this.ckbx_DocName.Text = "Document Name";
             this.ckbx_DocName.UseVisualStyleBackColor = true;
+            this.ckbx_DocName.CheckedChanged += new System.EventHandler(this.on_Change);
             // 
             // ckbx_DocNumb
             // 
@@ -220,6 +224,7 @@
             this.ckbx_DocNumb.TabIndex = 82;
             this.ckbx_DocNumb.Text = "Document#";
             this.ckbx_DocNumb.UseVisualStyleBackColor = true;
+            this.ckbx_DocNumb.CheckedChanged += new System.EventHandler(this.on_Change);
             // 
             // ckbx_All
             // 
@@ -230,6 +235,7 @@
             this.ckbx_All.TabIndex = 83;
             this.ckbx_All.Text = "All";
             this.ckbx_All.UseVisualStyleBackColor = true;
+            this.ckbx_All.CheckedChanged += new System.EventHandler(this.on_Change);
             // 
             // txt_Search
             // 
@@ -247,6 +253,7 @@
             this.ckbx_UserName.TabIndex = 86;
             this.ckbx_UserName.Text = "UserName";
             this.ckbx_UserName.UseVisualStyleBackColor = true;
+            this.ckbx_UserName.CheckedChanged += new System.EventHandler(this.on_Change);
             // 
             // comboBox1
             // 

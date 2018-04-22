@@ -20,6 +20,7 @@ namespace ProductWarehouseManager
         LogInClass login;
         HomePage homePage;
         ReadRSA readRsa;
+
         public LogIn()
         {
             InitializeComponent();
@@ -27,8 +28,16 @@ namespace ProductWarehouseManager
 
         private void LogIn_Load(object sender, EventArgs e)
         {
+            ComponentIntegrationFacade.INSTANCE.SafeUser.Logger = log;
+        }
+
+        //add in each class where insatanceFasade is called
+        public void log(int code, String message)
+        {
 
         }
+            
+
 
         private void btn_SignIn_Click(object sender, EventArgs e)
         {
@@ -36,7 +45,16 @@ namespace ProductWarehouseManager
             string user = txt_UserId.Text;
             string pass = txt_Password.Text;
 
+<<<<<<< HEAD
             /*login = new LogInClass("admin", "1234");
+=======
+            // ComponentIntegrationFacade.INSTANCE.SafeUser.login(user, pass, readRsa.readRsa());
+          //  ComponentIntegrationFacade.INSTANCE.SafePermissions.grantPermissionForRole();
+
+
+
+            login = new LogInClass("admin", "1234");
+>>>>>>> 75b0ee3948168822ede50a8e0f03dd5c5d8fab74
             //check if eligible to be logged in 
             if (login.IsLoggedIn(user, pass))
             {

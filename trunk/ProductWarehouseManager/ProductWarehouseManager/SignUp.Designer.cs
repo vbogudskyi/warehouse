@@ -294,7 +294,7 @@
             // 
             this.btn_Back.Location = new System.Drawing.Point(292, 475);
             this.btn_Back.Name = "btn_Back";
-            this.btn_Back.Size = new System.Drawing.Size(75, 23);
+            this.btn_Back.Size = new System.Drawing.Size(75, 26);
             this.btn_Back.TabIndex = 50;
             this.btn_Back.Text = "Back";
             this.btn_Back.UseVisualStyleBackColor = true;

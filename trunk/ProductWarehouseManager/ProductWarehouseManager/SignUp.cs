@@ -1,4 +1,5 @@
-﻿using ProductWarehouseManager.LogInSignUp;
+﻿using ProductWarehouseManager.Classes;
+using ProductWarehouseManager.LogInSignUp;
 using ProductWarehouseManager.Validation;
 using System;
 using System.Collections.Generic;
@@ -15,7 +16,7 @@ namespace ProductWarehouseManager
 {
     public partial class SignUp : Form
     {
-      
+        ReadRSA readRsa;
 
         public SignUp()
         {
@@ -82,6 +83,9 @@ namespace ProductWarehouseManager
             {
                 string fileName = browse.FileName;
                 txt_RSA.Text = Path.GetFileNameWithoutExtension(fileName);
+                readRsa = new ReadRSA(fileName);
+                readRsa.readRsa();
+                MessageBox.Show(readRsa.readRsa());
             }
 
         }
