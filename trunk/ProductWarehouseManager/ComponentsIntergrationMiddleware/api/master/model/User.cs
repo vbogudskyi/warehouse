@@ -16,7 +16,7 @@ namespace ComponentsIntergrationMiddleware.api.master.model
         private String rsa;
         private String login;
         private String telephone;
-        private int companyID;
+        private String companyID;
         private bool active;
 
         public int ID
@@ -73,7 +73,7 @@ namespace ComponentsIntergrationMiddleware.api.master.model
             set { active = value; }
         }
 
-        public int CompanyID
+        public String CompanyID
         {
             get { return companyID; }
             set { companyID = value; }

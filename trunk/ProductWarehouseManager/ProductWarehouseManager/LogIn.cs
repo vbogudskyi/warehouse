@@ -17,9 +17,7 @@ namespace ProductWarehouseManager
     public partial class LogIn : Form
     {
         //Enter code here for your version of username and userpassword 
-        LogInClass login;
-        HomePage homePage;
-        ReadRSA readRsa;
+        String rsa;
 
         public LogIn()
         {
@@ -34,7 +32,17 @@ namespace ProductWarehouseManager
         //add in each class where insatanceFasade is called
         public void log(int code, String message)
         {
-
+            if(code == 200)
+            {
+                ComponentIntegrationFacade.INSTANCE.SafeUser.Logger = null;
+                HomePage homePage = new HomePage();
+                homePage.Show();
+                Hide();
+            }
+            else
+            {
+                MessageBox.Show(message);
+            }
         }
             
 
@@ -45,7 +53,7 @@ namespace ProductWarehouseManager
             string user = txt_UserId.Text;
             string pass = txt_Password.Text;
 
-
+            ComponentIntegrationFacade.INSTANCE.SafeUser.login(user, pass, rsa);
             /*login = new LogInClass("admin", "1234");
             // ComponentIntegrationFacade.INSTANCE.SafeUser.login(user, pass, readRsa.readRsa());
           //  ComponentIntegrationFacade.INSTANCE.SafePermissions.grantPermissionForRole();
@@ -77,7 +85,7 @@ namespace ProductWarehouseManager
         private void btn_BrowseRSA_Click(object sender, EventArgs e)
         {
             OpenFileDialog browse = new OpenFileDialog();
-            browse.InitialDirectory = @"C:\Users\Nicolae\Documents\GitHub\warehouse\docs\vbohudskyi\rsa";
+            browse.InitialDirectory = @"C:\";
             browse.FileName = "*.rsa";
             browse.FilterIndex = 1;
             browse.Multiselect = false;
@@ -87,9 +95,8 @@ namespace ProductWarehouseManager
             {
                 string fileName = browse.FileName;
                 lb_RSA.Text = Path.GetFileNameWithoutExtension(fileName);
-                readRsa = new ReadRSA(fileName);
-                readRsa.readRsa();
-                MessageBox.Show(readRsa.readRsa());
+                ReadRSA readRsa = new ReadRSA(fileName);
+                rsa = readRsa.readRsa();
 
             }
         }

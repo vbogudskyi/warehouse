@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ComponentsIntergrationMiddleware.api.master.model
 {
-    sealed class ProductType
+    public sealed class ProductType
     {
         private int tid;
         private String name;
