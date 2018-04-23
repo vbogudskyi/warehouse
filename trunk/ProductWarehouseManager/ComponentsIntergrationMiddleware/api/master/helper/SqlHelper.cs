@@ -8,12 +8,12 @@ namespace ComponentsIntergrationMiddleware.api.master.helper
         SqlConnection connection = null;
         public SqlHelper()
         {
-            connection = new SqlConnection(@"Data Source=DESKTOP-LSDEIQP\SQLEXPRESS;Initial Catalog=ProductWarehouse;Integrated Security=True");
+            connection = new SqlConnection(@"Data Source=NICOLAE-PC\MYSQLSERVER;Initial Catalog=ProductWarehouse;Integrated Security=True");
         }
 
         public void rawQuery(String sql)
         {
-            using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-LSDEIQP\SQLEXPRESS;Initial Catalog=ProductWarehouse;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(@"Data Source=NICOLAE-PC\MYSQLSERVER;Initial Catalog=ProductWarehouse;Integrated Security=True"))
             {
                 using (SqlCommand command = new SqlCommand(sql, conn))
                 {

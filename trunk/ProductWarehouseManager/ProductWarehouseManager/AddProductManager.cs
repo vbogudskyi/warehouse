@@ -78,6 +78,12 @@ namespace ProductWarehouseManager
                 document.Description = data6;
                 ComponentIntegrationFacade.INSTANCE.SafeDocument.addDocument(document);
 
+                product = new Product(data, data1, data2, data3, data4, int.Parse(data5), data6);
+                dt.Rows.Add(data, data1, data2, data3, data4,data5,data6);
+                MessageBox.Show(upload.ToString());
+
+                upload.Add(upload.ToString());
+
             }
             catch(Exception ex)
             {

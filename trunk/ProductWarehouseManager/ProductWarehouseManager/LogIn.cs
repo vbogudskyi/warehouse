@@ -61,7 +61,7 @@ namespace ProductWarehouseManager
 
 
             login = new LogInClass("admin", "1234");
-            //check if eligible to be logged in 
+            check if eligible to be logged in 
             if (login.IsLoggedIn(user, pass))
             {
 
