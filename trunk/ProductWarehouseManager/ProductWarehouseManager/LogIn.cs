@@ -45,6 +45,8 @@ namespace ProductWarehouseManager
             string user = txt_UserId.Text;
             string pass = txt_Password.Text;
 
+
+            /*login = new LogInClass("admin", "1234");
             // ComponentIntegrationFacade.INSTANCE.SafeUser.login(user, pass, readRsa.readRsa());
           //  ComponentIntegrationFacade.INSTANCE.SafePermissions.grantPermissionForRole();
 
@@ -58,7 +60,7 @@ namespace ProductWarehouseManager
                 homePage = new HomePage();
                 homePage.Show();
                 Hide();
-            }
+            }*/
 
             user = "";
             pass = "";

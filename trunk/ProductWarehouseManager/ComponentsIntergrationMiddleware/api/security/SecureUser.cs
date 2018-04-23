@@ -98,6 +98,51 @@ namespace ComponentsIntergrationMiddleware.api.security
      
         }
 
+        public List<User> getAllUsers()
+        {
+            if (isLoggedIn())
+            {
+                try
+                {
+                    SqlHelper helper = new SqlHelper();
+                    SecurityDAL sdal = new SecurityDAL(helper);
+                    if (sdal.hasPermission(SignIN.UID, "SELECT"))
+                    {
+                        UserDAL dal = new UserDAL(helper);
+                        return dal.getAllUsers();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    log(ex);
+                }
+            }
+
+            return null;
+        }
+
+        public User getUser(String uid)
+        {
+            if (isLoggedIn())
+            {
+                try
+                {
+                    SqlHelper helper = new SqlHelper();
+                    SecurityDAL sdal = new SecurityDAL(helper);
+                    if(sdal.hasPermission(SignIN.UID, "SELECT"))
+                    {
+                        UserDAL dal = new UserDAL(helper);
+                        return dal.getUser(uid);
+                    }
+                }catch(Exception ex)
+                {
+                    log(ex);
+                }
+            }
+
+            return null;
+        }
+
         public void login(String email, String psw, String rsa)
         {
             if(SignIN == null)

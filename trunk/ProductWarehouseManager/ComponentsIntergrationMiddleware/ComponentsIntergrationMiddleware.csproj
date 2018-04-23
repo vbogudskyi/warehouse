@@ -65,6 +65,7 @@
     <Compile Include="api\master\model\Security.cs" />
     <Compile Include="api\master\model\SignIn.cs" />
     <Compile Include="api\master\model\User.cs" />
+    <Compile Include="api\security\SecureCompany.cs" />
     <Compile Include="api\security\SecureDocument.cs" />
     <Compile Include="api\security\SecurePermissions.cs" />
     <Compile Include="api\security\SecureRole.cs" />

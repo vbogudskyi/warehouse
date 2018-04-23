@@ -15,6 +15,7 @@ namespace ComponentsIntergrationMiddleware
         private SecureRole role;
         private SecurePermissions permissions;
         private SecureDocument document;
+        private SecureCompany company;
 
         private ComponentIntegrationFacade()
         {
@@ -22,6 +23,7 @@ namespace ComponentsIntergrationMiddleware
             role = new SecureRole(user);
             permissions = new SecurePermissions(user);
             document = new SecureDocument(user);
+            company = new SecureCompany(user);
         }
 
         public static ComponentIntegrationFacade INSTANCE
@@ -47,6 +49,11 @@ namespace ComponentsIntergrationMiddleware
         public SecureDocument SafeDocument
         {
             get { return document; }
+        }
+
+        public SecureCompany SafeCompany
+        {
+            get { return company; }
         }
 
     }
