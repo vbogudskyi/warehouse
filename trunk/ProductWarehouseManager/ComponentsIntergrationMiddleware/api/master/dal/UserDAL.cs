@@ -46,7 +46,8 @@ namespace ComponentsIntergrationMiddleware.api.master.dal
 
         public User getUser(String uid)
         {
-            return get(String.Format("SELECT * FROM Users WHERE UID={0}", uid)).FirstOrDefault();
+            String query = String.Format("SELECT * FROM Users WHERE UID='{0}'", uid);
+            return get(query).FirstOrDefault();
         }
 
         public List<User> getAllUsers()
@@ -68,8 +69,8 @@ namespace ComponentsIntergrationMiddleware.api.master.dal
             user.LNAME = (String)reader.GetValue(reader.GetOrdinal("LNAME"));
             user.FNAME = (String)reader.GetValue(reader.GetOrdinal("FNAME"));
             user.LOGIN = (String)reader.GetValue(reader.GetOrdinal("LOGIN"));
-            user.ACTIVE = ((int)reader.GetValue(reader.GetOrdinal("ACTIVE"))) == 1;
-            user.CompanyID = (int)reader.GetValue(reader.GetOrdinal("CID"));
+            user.ACTIVE = (bool)reader.GetValue(reader.GetOrdinal("ACTIVE"));
+            user.CompanyID = (String)reader.GetValue(reader.GetOrdinal("CID"));
             return user;
         }
     }

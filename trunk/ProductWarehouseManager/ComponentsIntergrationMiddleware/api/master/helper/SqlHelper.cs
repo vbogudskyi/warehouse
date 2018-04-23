@@ -5,15 +5,19 @@ namespace ComponentsIntergrationMiddleware.api.master.helper
 {
     class SqlHelper
     {
-        public SqlHelper(){}
+        SqlConnection connection = null;
+        public SqlHelper()
+        {
+            connection = new SqlConnection(@"Data Source=DESKTOP-LSDEIQP\SQLEXPRESS;Initial Catalog=ProductWarehouse;Integrated Security=True");
+        }
 
         public void rawQuery(String sql)
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-LSDEIQP\SQLEXPRESS;Initial Catalog=ProductWarehouse;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-LSDEIQP\SQLEXPRESS;Initial Catalog=ProductWarehouse;Integrated Security=True"))
             {
-                using (SqlCommand command = new SqlCommand(sql, connection))
+                using (SqlCommand command = new SqlCommand(sql, conn))
                 {
-                    connection.Open();
+                    conn.Open();
                     command.ExecuteNonQuery();
                 }
             }
@@ -21,13 +25,16 @@ namespace ComponentsIntergrationMiddleware.api.master.helper
 
         public SqlDataReader execSql(String sql)
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-LSDEIQP\SQLEXPRESS;Initial Catalog=ProductWarehouse;Integrated Security=True"))
-            {
-                using (SqlCommand command = new SqlCommand(sql, connection)){
+            SqlDataReader reader = null;
+            SqlCommand command = new SqlCommand(sql, connection);
+            connection.Open();
+            reader = command.ExecuteReader();
+            return reader;
+        }
 
-                    return command.ExecuteReader();
-                }
-            }
+        public void Close()
+        {
+            connection.Close();
         }
     }
 }

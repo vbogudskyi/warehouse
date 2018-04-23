@@ -1,4 +1,6 @@
-﻿using ProductWarehouseManager.Validation;
+﻿using ComponentsIntergrationMiddleware;
+using ComponentsIntergrationMiddleware.api.master.model;
+using ProductWarehouseManager.Validation;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,11 +22,19 @@ namespace ProductWarehouseManager
 
         private void MyAccount_Load(object sender, EventArgs e)
         {
-
+            User me = ComponentIntegrationFacade.INSTANCE.SafeUser.Me();
+            txt_FirstName.Text = me.FNAME;
+            txt_LastName.Text = me.LNAME;
+            txt_Password.Text = "";
+            txt_Password2.Text = "";
+            txt_Phone.Text = me.TELEPHONE;
+            txt_UserId.Text = me.LOGIN;
+            txt_RSA.Text = me.RSA;
         }
 
         private void btn_Back_Click(object sender, EventArgs e)
         {
+            ComponentIntegrationFacade.INSTANCE.SafeUser.Logger = null;
             MyAccount.ActiveForm.Close();
         }
 

@@ -109,7 +109,9 @@ namespace ComponentsIntergrationMiddleware.api.security
                     if (sdal.hasPermission(SignIN.UID, "SELECT"))
                     {
                         UserDAL dal = new UserDAL(helper);
-                        return dal.getAllUsers();
+                        List<User> users = dal.getAllUsers();
+                        helper.Close();
+                        return users;
                     }
                 }
                 catch (Exception ex)
@@ -119,6 +121,11 @@ namespace ComponentsIntergrationMiddleware.api.security
             }
 
             return null;
+        }
+
+        public User Me()
+        {
+            return getUser(SignIN.UID);
         }
 
         public User getUser(String uid)
@@ -131,8 +138,12 @@ namespace ComponentsIntergrationMiddleware.api.security
                     SecurityDAL sdal = new SecurityDAL(helper);
                     if(sdal.hasPermission(SignIN.UID, "SELECT"))
                     {
+                        helper.Close();
+                        helper = new SqlHelper();
                         UserDAL dal = new UserDAL(helper);
-                        return dal.getUser(uid);
+                        User user = dal.getUser(uid);
+                        helper.Close();
+                        return user;
                     }
                 }catch(Exception ex)
                 {
@@ -149,8 +160,11 @@ namespace ComponentsIntergrationMiddleware.api.security
             {
                 try
                 {
-                    SignInDAL dal = new SignInDAL(new SqlHelper());
+                    SqlHelper helper = new SqlHelper();
+                    SignInDAL dal = new SignInDAL(helper);
                     SignIN = dal.login(email, psw, rsa);
+                    helper.Close();
+                    log(200, "Login successfull");
                 }catch(Exception ex)
                 {
                     log(ex);
@@ -164,12 +178,15 @@ namespace ComponentsIntergrationMiddleware.api.security
 
         public void logout()
         {
-            if(!isLoggedIn())
+            if(isLoggedIn())
             {
                 try
                 {
-                    SignInDAL dal = new SignInDAL(new SqlHelper());
+                    SqlHelper helper = new SqlHelper();
+                    SignInDAL dal = new SignInDAL(helper);
                     SignIN = dal.logout(SignIN.UID, SignIN.Cookie);
+                    helper.Close();
+                    log(200, "Logout successfull");
                 }catch(Exception ex)
                 {
                     log(ex);
@@ -189,8 +206,11 @@ namespace ComponentsIntergrationMiddleware.api.security
                 {
                     try
                     {
-                        SignInDAL dal = new SignInDAL(new SqlHelper());
-                        return dal.isLoggedIn(SignIN.UID, SignIN.Cookie);
+                        SqlHelper helper = new SqlHelper();
+                        SignInDAL dal = new SignInDAL(helper);
+                        bool isLoggedIn = dal.isLoggedIn(SignIN.UID, SignIN.Cookie);
+                        helper.Close();
+                        return isLoggedIn;
                     }catch(Exception ex)
                     {
                         log(ex);

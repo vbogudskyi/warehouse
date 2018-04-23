@@ -34,8 +34,8 @@ namespace ComponentsIntergrationMiddleware.api.master.dal
                 {
                     items.Add(getFromReader(reader));
                 }
+
             }
-            reader.Close();
             return items;
         }
     }

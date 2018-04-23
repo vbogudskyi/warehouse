@@ -15,7 +15,7 @@ namespace ComponentsIntergrationMiddleware.api.master.dal
 
         public List<String> getUserPermissions(String uid)
         {
-            String query = String.Format("SELECT UID, RID, PID, NAME FROM SignIn SI " +
+            String query = String.Format("SELECT U.UID, U.RID, P.PID, P.NAME FROM SignIn SI " +
                 "JOIN Users U ON (U.UID=SI.UID) " +
                 "JOIN ROLE R ON (U.RID=R.RID) " +
                 "JOIN RolePermissions RP ON (R.RID=RP.RID) " +

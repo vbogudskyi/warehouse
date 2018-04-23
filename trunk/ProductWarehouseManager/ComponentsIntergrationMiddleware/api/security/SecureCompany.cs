@@ -35,12 +35,22 @@ namespace ComponentsIntergrationMiddleware.api.security
         {
             if (SafeUser != null && SafeUser.isLoggedIn())
             {
-                SqlHelper helper = new SqlHelper();
-                SecurityDAL sdal = new SecurityDAL(helper);
-                if (sdal.hasPermission(SafeUser.SignIN.UID, "SELECT"))
+                try
                 {
-                    CompanyDAL dal = new CompanyDAL(helper);
-                    return dal.getAllcompanies(); 
+                    SqlHelper helper = new SqlHelper();
+                    SecurityDAL sdal = new SecurityDAL(helper);
+                    if (sdal.hasPermission(SafeUser.SignIN.UID, "SELECT"))
+                    {
+                        helper.Close();
+                        helper = new SqlHelper();
+                        CompanyDAL dal = new CompanyDAL(helper);
+                        var companies = dal.getAllcompanies();
+                        helper.Close();
+                        return companies;
+                    }
+                }catch(Exception ex)
+                {
+                    log(ex);
                 }
             }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ComponentsIntergrationMiddleware;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -57,15 +58,23 @@ namespace ProductWarehouseManager
 
         private void HomePage_Load(object sender, EventArgs e)
         {
+            ComponentIntegrationFacade.INSTANCE.SafeUser.Logger = log;
+        }
 
+        public void log(int code, String message)
+        {
+            if (code == 200)
+            {
+                ComponentIntegrationFacade.INSTANCE.SafeUser.Logger = null;
+                LogIn logIn = new LogIn();
+                logIn.Show();
+                Close();
+            }
         }
 
         private void btn_Exit_Click(object sender, EventArgs e)
         {
-            // Application.Exit();
-            LogIn logIn = new LogIn();
-            logIn.Show();
-            Close();
+            ComponentIntegrationFacade.INSTANCE.SafeUser.logout();
         }
 
         private void btn_RetrieveProduct_Click(object sender, EventArgs e)

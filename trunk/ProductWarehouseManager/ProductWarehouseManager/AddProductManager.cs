@@ -1,4 +1,6 @@
-﻿using ProductWarehouseManager.Classes;
+﻿using ComponentsIntergrationMiddleware;
+using ComponentsIntergrationMiddleware.api.bulk;
+using ProductWarehouseManager.Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,6 +24,8 @@ namespace ProductWarehouseManager
             InitializeComponent();
         }
 
+
+
         private void btn_Back_Click(object sender, EventArgs e)
         {
             AddProductManager.ActiveForm.Close();
@@ -30,6 +34,11 @@ namespace ProductWarehouseManager
 
         private void AddProductManager_Load(object sender, EventArgs e)
         {
+            var companies = ComponentIntegrationFacade.INSTANCE.
+                 SafeCompany.getAllCompanies();
+            var types = ComponentIntegrationFacade.INSTANCE.SafeDocument.getAllProductTypes();
+            cmbx_compName.Items.AddRange(companies.Select(cmp => cmp.Name).ToArray());
+            cmbx_ProdType.Items.AddRange(types.Select(tp => tp.Name).ToArray());
             dt = new DataTable();
             dt.Columns.Add("Creation Date", typeof(DateTime));
             dt.Columns.Add("Company Name", typeof(string));
@@ -58,14 +67,16 @@ namespace ProductWarehouseManager
 
             try
             {
-               // dr = dt.NewRow();
-               
-                product = new Product(data, data1, data2, data3, data4, int.Parse(data5), data6);
-                dt.Rows.Add(data, data1, data2, data3, data4, data5, data6);
-              //  MessageBox.Show(product.ToString());
-         
-                upload.Add(product.ToString());
-               
+
+                Record document = new Record();
+                document.CompanyName = data1;
+                document.CreationDate = data;
+                document.DocumentName = data2;
+                document.ProductName = data3;
+                document.ProductType = data4;
+                document.ProductQuantity = int.Parse(data5);
+                document.Description = data6;
+                ComponentIntegrationFacade.INSTANCE.SafeDocument.addDocument(document);
 
             }
             catch(Exception ex)
